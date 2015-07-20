@@ -1,0 +1,55 @@
+<div class="book">
+  <div class="info">
+    {{#if favorite}}
+      <img class="icon star" src="img/icons/i_starred.svg" alt="favorite">
+      {{else}}
+      <img class="icon star" src="img/icons/i_unstarred.svg" alt="favorite">
+    {{/if}}
+    <h1>{{title}}</h1><br>
+    <h3>{{author}}</h3>
+    <p>{{description}}</p>
+  </div>
+
+  <img class="banner" {{bind-attr src=banner}} alt="">
+
+    <div class="cardinality">
+      <section>
+        {{#link-to "" classNames="language source" tagName="h1" title=sourceLanguage}}{{sourceLanguage}}{{/link-to}}
+        <img class="icon cardinality" src="img/icons/i_cardinality.svg" alt="">
+        {{#link-to "" classNames="language target" tagName="h1" title=targetLanguage}}{{targetLanguage}}{{/link-to}}
+      </section>
+    </div>
+
+  <section class="content">
+    <ul>
+      {{#each phrases}}
+        <li class="entry">
+          <ul>
+            {{#if sourcePhrase}}
+            <li class="source">
+              <p>{{sourcePhrase}}</p>
+            </li>
+            {{/if}}
+            {{#if targetPhrase}}
+            <li class="target">
+              <p>{{targetPhrase}}</p>
+            </li>
+            {{/if}}
+          </ul>
+        </li>
+        {{else}}
+        <p class="empty">Shoot! There is nothing here!</p>
+      {{/each}}
+      {{!-- {{partial "phraseInput"}} --}}
+    </ul>
+    <div class="addPhrase">
+      <button {{action "addPhrase"}}>+</button>
+    </div>
+    <div class="newPhrase">
+      {{input classNames="input source" value="" valueBinding="sourcePhrase" placeholder="Source Phrase"  autofocus=true}}
+      {{input classNames="input target" value="" valueBinding="targetPhrase" placeholder="Target Phrase" autofocus=true}}
+      <a class="icon save saveSource" {{action "saveSource"}} title="Save">+</a>
+      <a class="icon save saveTarget" {{action "saveTarget"}} title="Save">+</a>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,27 @@
+<div class="container dashboard">
+  <section>
+    <h3>Favorites</h3>
+    <ul>
+      {{#each}}
+        {{#if favorite}}
+         {{book-entry book=this tagName="li"}}
+        {{/if}}
+      {{/each}}
+    </ul>
+  </section>
+
+  <section>
+    <h3>New</h3>
+    <ul>
+      {{#each}}
+        {{#unless favorite}}
+          {{book-entry book=this tagName="li"}}
+        {{/unless}}
+      {{/each}}
+    </ul>
+  </section>
+
+  {{#link-to "new" classNames="newBook"}}
+    +
+  {{/link-to}}
+</div>

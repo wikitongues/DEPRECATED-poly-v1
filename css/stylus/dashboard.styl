@@ -1,0 +1,91 @@
+.dashboard
+  float left
+  width 100%
+  background #fafafa
+
+  h3
+    margin 0
+    padding 1em
+    font-weight 100
+    color $secondary-blue
+    border-bottom 2px solid #F4F4F4
+
+  section
+    ul
+      padding 0
+      margin 0
+      list-style-type none
+
+      li
+        font-size 1.5em
+        border-bottom 2px solid #F4F4F4
+        height 100px
+        overflow hidden
+        background #fff
+
+        &:hover
+          background #fcfcfc
+
+        a
+          display inline-block
+          width 100%
+          height 100%
+
+          img
+            float left
+            margin 30px
+
+          p
+            width 60%
+            margin 0
+            float left
+
+          section
+            height 100%
+
+            &.info
+              width 70%
+              display inline-block
+
+              .banner
+                float left
+                margin 0
+                height 100px
+                width 100px
+                display inline-block
+                overflow hidden
+
+                img
+                  margin 0 0 0 -15px
+                  float left
+                  min-width 100px
+                  height 100px
+
+              p
+                &.title
+                  padding .7em 0 .2em
+                &.author
+                  font-size .8em
+                  color $secondary-blue
+
+            &.details
+              margin-right 1em
+              width 188px
+              float right
+
+              p
+                text-align center
+                float left
+                width 60px
+                padding 1.3em 0 0
+
+              img
+                float left
+                margin 1.7em 1em 0
+
+  .newBook
+    position fixed
+    bottom .5em
+    left 50%
+    margin-left -30px
+    materialButton()

@@ -1,0 +1,13 @@
+{{#link-to "book" book}}
+<section class="info">
+  <span class="banner"><img {{bind-attr src="book.banner"}} alt=""></span>
+  {{#if book.favorite}}<img class="icon star" src="img/icons/i_starred.svg" alt="favorite">{{else}}<img class="icon star" src="img/icons/i_unstarred.svg" alt="favorite">{{/if}}
+  <p class="title">{{book.title}}</p>
+  <p class="author">{{book.author}}</p>
+</section>
+<section class="details">
+  <p>{{book.sourceCode}}</p>
+  <img class="icon cardinality" src="img/icons/i_cardinality.svg" alt="">
+  <p>{{book.targetCode}}</p>
+</section>
+{{/link-to}}
