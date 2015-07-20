@@ -1,7 +1,20 @@
-#Wikitongues Development Outline
+#Wikitongues Poly
 ***
 
-## What is Wikitongues?
+##To Do
+####Fundamental
+* build new book to model functionality
+* build search page
+* build settings/profile page
+
+####Cosmetic
+* fix phrase input progress marker
+* style new book page
+* style book page info
+
+
+
+## About Wikitongues?
 Wikitongues is an international non-profit organization working to provide access to every language in the world.
 
 We define access as a spectrum ranging from the first exposure to a language, all the way to fluency, through education. To validate our assumption that there is a thirst for new forms of language content, we designed a proof of concept to quickly prove the hypothesis that exposure to unique and remote languages is widely wanted. Through the tireless work of our dynamic network of volunteers, we’ve been able to make over 200 videos in currently 130 unique languages, both spoken and signed, healthy and endangered, available on our YouTube channel.
