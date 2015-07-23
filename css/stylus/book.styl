@@ -11,8 +11,13 @@
     float left
 
   .info
+    position relative
+    padding 0 65px
+
     img.star
-      float left
+      position absolute
+      top 0
+      left 0
       margin 15px
       width 35px
 
@@ -21,9 +26,13 @@
       margin .4em 0
 
     h3
-      float left
+      line-height 2.4em
+      margin-bottom 0
+      float right
 
     p
+      padding 2em 0
+      margin 0
       float left
 
   .cardinality
@@ -43,5 +52,11 @@
     img
       border-bottom none
       float left
-      margin 1.6em -10px
-      width 20px
+      margin 1.1em -20px
+      width 40px
+      height 40px
+      padding 10px
+      background #fff
+      // border-radius 100%
+      position relative
+      z-index 10

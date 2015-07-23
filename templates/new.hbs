@@ -1,8 +1,29 @@
-<div class="new">
-  <h1>New book</h1>
-  {{input valueBindings="title" placeholder="Title"}}
-  {{input valueBindings="description" placeholder="Description"}}
-  {{input valueBindings="sourceLanguage" placeholder="Source Language"}}
-  {{input valueBindings="targetLanguage" placeholder="Target Language"}}
-  <button {{action "save"}}>Save</button>
+<div class="new book">
+  <div class="info">
+    {{#if favorite}}
+      <img class="icon star" src="img/icons/i_starred.svg" alt="favorite">
+      {{else}}
+      <img class="icon star" src="img/icons/i_unstarred.svg" alt="favorite">
+    {{/if}}
+    {{input classNames="title" valueBinding="model.title" placeholder="Useful phrases in Laputa"}}
+    <h3>{{author}}</h3>
+    {{textarea rows=2 classNames="description" valueBinding="model.description" placeholder="A collection of useful phrases in Laputa, a Swiftian language spoken in Balnibarbi and a number of other islands."}}
+  </div>
+
+  <img class="banner" {{bind-attr src=banner}} alt="">
+
+    <div class="cardinality">
+      <section>
+        {{input classNames="languageSource" valueBinding="model.sourceLanguage" placeholder="Source Language"}}
+        <img class="icon cardinality" src="img/icons/i_cardinality.svg" alt="">
+        {{input classNames="languageTarget" valueBinding="model.targetLanguage" placeholder="Target Language"}}
+      </section>
+    </div>
+
+  <section class="content">
+    <h1>To add a phrase, <br>click the button below!</h1>
+    <div class="addPhrase">
+      <button {{action "saveBook"}}>+</button>
+    </div>
+  </section>
 </div>

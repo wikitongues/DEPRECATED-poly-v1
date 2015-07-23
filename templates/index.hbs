@@ -2,10 +2,8 @@
   <section>
     <h3>Favorites</h3>
     <ul>
-      {{#each}}
-        {{#if favorite}}
-         {{book-entry book=this tagName="li"}}
-        {{/if}}
+      {{#each isFavorite}}
+       {{book-entry book=this tagName="li"}}
       {{/each}}
     </ul>
   </section>
@@ -13,10 +11,8 @@
   <section>
     <h3>New</h3>
     <ul>
-      {{#each}}
-        {{#unless favorite}}
-          {{book-entry book=this tagName="li"}}
-        {{/unless}}
+      {{#each isNew}}
+        {{book-entry book=this tagName="li"}}
       {{/each}}
     </ul>
   </section>

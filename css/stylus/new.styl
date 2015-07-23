@@ -1,0 +1,55 @@
+.book
+  &.new
+    display inline-block
+
+    input, textarea
+      border none
+      width 100%
+      border-bottom 2px solid transparent
+
+      &:focus
+        outline none
+        border-color $hover
+
+    .info
+      .title
+        font-size 2em
+        margin 0.375em 0
+
+      .description
+        margin 2em 0
+        resize vertical
+        font-size 1em
+
+    img.banner
+      width 100%
+      min-height 724px
+      background #5FC09F
+
+    .cardinality
+      section
+        input
+          width 50%
+          text-align center
+          float left
+          background transparent
+          font-size 1.5em
+          padding .8em 0 .1em
+          margin-top 1px
+          margin-bottom .4em
+
+    .content
+      height 27.5%
+      position relative
+
+      h1
+        text-align center
+        font-size 1.2em
+        width 250px
+        margin 3em auto 5em
+        color $blue
+        opacity .2
+
+      .addPhrase
+        position absolute
+        bottom .5em
