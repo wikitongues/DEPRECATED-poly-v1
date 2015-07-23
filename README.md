@@ -10,14 +10,15 @@ App runs on `localhost:9000`
 
 ##To Do
 ####Fundamental
-* build new book to model functionality
 * build search page
 * build settings/profile page
 
+####Features
+* add created dateTime to book, phrase
+* add tags to books
+
 ####Cosmetic
 * fix phrase input progress marker
-* style new book page
-* style book page info
 
 
 
