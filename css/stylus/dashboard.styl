@@ -63,6 +63,24 @@
                   min-width 100px
                   height 100px
 
+              button
+                &.favorite
+                  float left
+                  padding 8px
+                  margin 22px
+                  border none
+                  cursor pointer
+                  background transparent
+                  border-radius 100%
+                  outline none
+
+                  &:active
+                    padding-top 9px
+
+                  img.star
+                    float left
+                    margin 0
+
               p
                 &.title
                   padding .7em 0 .2em
@@ -72,14 +90,22 @@
 
             &.details
               margin-right 1em
-              width 188px
+              min-width 188px
               float right
 
-              p
-                text-align center
+              .language
                 float left
-                width 60px
-                padding 1.3em 0 0
+                height 98px
+                display table
+                width 100px
+
+                p
+                  vertical-align middle
+                  display table-cell
+                  text-align center
+                  float none
+                  padding 0
+                  font-size .7em
 
               img
                 float left

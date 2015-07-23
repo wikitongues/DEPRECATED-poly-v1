@@ -1,11 +1,9 @@
 App.NewController = Ember.Controller.extend({
   actions: {
     saveBook: function() {
-      var controller = this,
-      newId = this.get('model.id');
-      console.log(newId)
+      var controller = this
       this.get('model').save().then(function() {
-        controller.transitionToRoute('/books/'+newId)
+        controller.transitionToRoute('/books/'+controller.get('model.id'))
       })
     }
   }

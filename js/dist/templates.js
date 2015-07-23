@@ -119,13 +119,13 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   
-  data.buffer.push("\n      <img class=\"icon star\" src=\"img/icons/i_starred.svg\" alt=\"favorite\">\n      ");
+  data.buffer.push("\n        <img class=\"icon star\" src=\"img/icons/i_starred.svg\" alt=\"favorite\">\n        ");
   }
 
 function program3(depth0,data) {
   
   
-  data.buffer.push("\n      <img class=\"icon star\" src=\"img/icons/i_unstarred.svg\" alt=\"favorite\">\n    ");
+  data.buffer.push("\n        <img class=\"icon star\" src=\"img/icons/i_unstarred.svg\" alt=\"favorite\">\n      ");
   }
 
 function program5(depth0,data) {
@@ -182,10 +182,12 @@ function program14(depth0,data) {
   data.buffer.push("\n        <p class=\"empty\">Shoot! There is nothing here!</p>\n      ");
   }
 
-  data.buffer.push("<div class=\"book\">\n  <div class=\"info\">\n    ");
+  data.buffer.push("<div class=\"book\">\n  <div class=\"info\">\n    <button class=\"favorite\" ");
+  data.buffer.push(escapeExpression(helpers.action.call(depth0, "favorite", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
+  data.buffer.push(">\n      ");
   stack1 = helpers['if'].call(depth0, "favorite", {hash:{},hashTypes:{},hashContexts:{},inverse:self.program(3, program3, data),fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n    <h1>");
+  data.buffer.push("\n    </button>\n    <h1>");
   stack1 = helpers._triageMustache.call(depth0, "title", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("</h1>\n    <h3>");
@@ -212,10 +214,10 @@ function program14(depth0,data) {
     'title': ("targetLanguage")
   },hashTypes:{'classNames': "STRING",'tagName': "STRING",'title': "ID"},hashContexts:{'classNames': depth0,'tagName': depth0,'title': depth0},inverse:self.noop,fn:self.program(7, program7, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "", options) : helperMissing.call(depth0, "link-to", "", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n      </section>\n    </div>\n\n  <section class=\"content\">\n    <ul>\n      ");
+  data.buffer.push("\n      </section>\n    </div>\n\n  <section class=\"content-wrapper\">\n    <ul class=\"content\">\n      ");
   stack1 = helpers.each.call(depth0, "phrases", {hash:{},hashTypes:{},hashContexts:{},inverse:self.program(14, program14, data),fn:self.program(9, program9, data),contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n      \n    </ul>\n    <div class=\"addPhrase\">\n      <button ");
+  data.buffer.push("\n      \n    </ul>\n    <div class=\"addPhrase open\">\n      <button ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "addPhrase", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
   data.buffer.push(">+</button>\n    </div>\n    <div class=\"newPhrase\">\n      ");
   data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
@@ -254,22 +256,26 @@ function program1(depth0,data) {
   data.buffer.push("\n<section class=\"info\">\n  <span class=\"banner\">\n    ");
   stack1 = helpers['if'].call(depth0, "book.banner", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(2, program2, data),contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n  </span>\n  ");
+  data.buffer.push("\n  </span>\n  <button class=\"favorite\" ");
+  data.buffer.push(escapeExpression(helpers.action.call(depth0, "favorite", {hash:{
+    'bubbles': (false)
+  },hashTypes:{'bubbles': "BOOLEAN"},hashContexts:{'bubbles': depth0},contexts:[depth0],types:["STRING"],data:data})));
+  data.buffer.push(">\n    ");
   stack1 = helpers['if'].call(depth0, "book.favorite", {hash:{},hashTypes:{},hashContexts:{},inverse:self.program(6, program6, data),fn:self.program(4, program4, data),contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n  <p class=\"title\">");
+  data.buffer.push("\n  </button>\n  <p class=\"title\">");
   stack1 = helpers._triageMustache.call(depth0, "book.title", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("</p>\n  <p class=\"author\">");
   stack1 = helpers._triageMustache.call(depth0, "book.author", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("</p>\n</section>\n<section class=\"details\">\n  <p>");
+  data.buffer.push("</p>\n</section>\n<section class=\"details\">\n  <span class=\"source language\">\n    <p>");
   stack1 = helpers._triageMustache.call(depth0, "book.sourceLanguage", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("</p>\n  <img class=\"icon cardinality\" src=\"img/icons/i_cardinality.svg\" alt=\"\">\n  <p>");
+  data.buffer.push("</p>\n  </span>\n  <img class=\"icon cardinality\" src=\"img/icons/i_cardinality.svg\" alt=\"\">\n  <span class=\"target language\">\n    <p>");
   stack1 = helpers._triageMustache.call(depth0, "book.targetLanguage", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("</p>\n</section>\n");
+  data.buffer.push("</p>\n  </span>\n</section>\n");
   return buffer;
   }
 function program2(depth0,data) {
@@ -286,13 +292,13 @@ function program2(depth0,data) {
 function program4(depth0,data) {
   
   
-  data.buffer.push("<img class=\"icon star\" src=\"img/icons/i_starred.svg\" alt=\"favorite\">");
+  data.buffer.push("\n      <img class=\"icon star\" src=\"img/icons/i_starred.svg\" alt=\"favorite\">\n      ");
   }
 
 function program6(depth0,data) {
   
   
-  data.buffer.push("<img class=\"icon star\" src=\"img/icons/i_unstarred.svg\" alt=\"favorite\">");
+  data.buffer.push("\n      <img class=\"icon star\" src=\"img/icons/i_unstarred.svg\" alt=\"favorite\">\n    ");
   }
 
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0,depth0],types:["STRING","ID"],data:data},helper ? helper.call(depth0, "book", "book", options) : helperMissing.call(depth0, "link-to", "book", "book", options));
@@ -379,24 +385,26 @@ Ember.TEMPLATES["new"] = Ember.Handlebars.template(function anonymous(Handlebars
 /**/) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
-  var buffer = '', stack1, helper, options, self=this, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
+  var buffer = '', stack1, helper, options, escapeExpression=this.escapeExpression, self=this, helperMissing=helpers.helperMissing;
 
 function program1(depth0,data) {
   
   
-  data.buffer.push("\n      <img class=\"icon star\" src=\"img/icons/i_starred.svg\" alt=\"favorite\">\n      ");
+  data.buffer.push("\n        <img class=\"icon star\" src=\"img/icons/i_starred.svg\" alt=\"favorite\">\n        ");
   }
 
 function program3(depth0,data) {
   
   
-  data.buffer.push("\n      <img class=\"icon star\" src=\"img/icons/i_unstarred.svg\" alt=\"favorite\">\n    ");
+  data.buffer.push("\n        <img class=\"icon star\" src=\"img/icons/i_unstarred.svg\" alt=\"favorite\">\n      ");
   }
 
-  data.buffer.push("<div class=\"new book\">\n  <div class=\"info\">\n    ");
+  data.buffer.push("<div class=\"new book\">\n  <div class=\"info\">\n    <button class=\"favorite\" ");
+  data.buffer.push(escapeExpression(helpers.action.call(depth0, "favorite", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
+  data.buffer.push(">\n      ");
   stack1 = helpers['if'].call(depth0, "favorite", {hash:{},hashTypes:{},hashContexts:{},inverse:self.program(3, program3, data),fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n    ");
+  data.buffer.push("\n    </button>\n    ");
   data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
     'classNames': ("title"),
     'valueBinding': ("model.title"),
@@ -428,7 +436,7 @@ function program3(depth0,data) {
     'valueBinding': ("model.targetLanguage"),
     'placeholder': ("Target Language")
   },hashTypes:{'classNames': "STRING",'valueBinding': "STRING",'placeholder': "STRING"},hashContexts:{'classNames': depth0,'valueBinding': depth0,'placeholder': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
-  data.buffer.push("\n      </section>\n    </div>\n\n  <section class=\"content\">\n    <h1>To add a phrase, <br>click the button below!</h1>\n    <div class=\"addPhrase\">\n      <button ");
+  data.buffer.push("\n      </section>\n    </div>\n\n  <section class=\"content-wrapper\">\n    <h1>To add a phrase, <br>click the button below!</h1>\n    <div class=\"addPhrase open\">\n      <button ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "saveBook", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
   data.buffer.push(">+</button>\n    </div>\n  </section>\n</div>");
   return buffer;

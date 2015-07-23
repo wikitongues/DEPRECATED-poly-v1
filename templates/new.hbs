@@ -1,10 +1,12 @@
 <div class="new book">
   <div class="info">
-    {{#if favorite}}
-      <img class="icon star" src="img/icons/i_starred.svg" alt="favorite">
-      {{else}}
-      <img class="icon star" src="img/icons/i_unstarred.svg" alt="favorite">
-    {{/if}}
+    <button class="favorite" {{action "favorite"}}>
+      {{#if favorite}}
+        <img class="icon star" src="img/icons/i_starred.svg" alt="favorite">
+        {{else}}
+        <img class="icon star" src="img/icons/i_unstarred.svg" alt="favorite">
+      {{/if}}
+    </button>
     {{input classNames="title" valueBinding="model.title" placeholder="Useful phrases in Laputa"}}
     <h3>{{author}}</h3>
     {{textarea rows=2 classNames="description" valueBinding="model.description" placeholder="A collection of useful phrases in Laputa, a Swiftian language spoken in Balnibarbi and a number of other islands."}}
@@ -20,9 +22,9 @@
       </section>
     </div>
 
-  <section class="content">
+  <section class="content-wrapper">
     <h1>To add a phrase, <br>click the button below!</h1>
-    <div class="addPhrase">
+    <div class="addPhrase open">
       <button {{action "saveBook"}}>+</button>
     </div>
   </section>

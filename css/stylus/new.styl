@@ -8,6 +8,10 @@
       border-bottom 2px solid transparent
       float left
 
+      &.missing
+        ::placeholder
+          color red
+
       &:focus
         outline none
         border-color $hover
@@ -37,7 +41,7 @@
           margin-top 1px
           margin-bottom .4em
 
-    .content
+    .content-wrapper
       height 27.5%
       position relative
 

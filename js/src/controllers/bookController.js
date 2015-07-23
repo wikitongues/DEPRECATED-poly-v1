@@ -2,15 +2,19 @@ App.BookController = Ember.ObjectController.extend({
   sourcePhrase:"",
   targetPhrase:"",
   actions: {
+    favorite: function() {
+      this.toggleProperty('favorite')
+    },
      addPhrase: function() {
+      $(".addPhrase").toggleClass("open")
       $(".newPhrase").toggleClass("open")
       var a = $(".book").scrollTop()
-      $(".book .content>ul").append("<li class='entry'><ul><li class='source'><p><span class='progress'><span></span><span></span><span></span></span></p></li></ul></li>")
+      $(".book .content-wrapper ul.content").append("<li class='entry'><ul><li class='source'><p><span class='progress'><span></span><span></span><span></span></span></p></li></ul></li>")
       $(".book").scrollTop(a+100)
     },
     saveSource: function() {
       if($(".newPhrase .input.source").val()!="") {
-        $(".book .content>ul .entry:last-of-type ul li.source p").html($(".newPhrase .input.source").val()).parent().parent().append("<li class='target'><p><span class='progress'><span></span><span></span><span></span></span></p></li>")
+        $(".book .content-wrapper ul.content .entry:last-of-type ul li.source p").html($(".newPhrase .input.source").val()).parent().parent().append("<li class='target'><p><span class='progress'><span></span><span></span><span></span></span></p></li>")
         $(".newPhrase .input.source").hide()
         $(".newPhrase .input.target").show()
         $(".newPhrase .saveSource").hide()
@@ -28,6 +32,7 @@ App.BookController = Ember.ObjectController.extend({
         $(".newPhrase .saveTarget").hide()
         $(".newPhrase .input.target").val("")
         $(".newPhrase").toggleClass("open")
+        $(".addPhrase").toggleClass("open")
 
         var a = $(".book").scrollTop()
         $(".book").scrollTop(a+100)
@@ -45,7 +50,7 @@ App.BookController = Ember.ObjectController.extend({
           controller.get("model.phrases").addObject(phrase)
         })
       }
-      $(".book .content>ul .entry:last-of-type").remove()
+      $(".book .content-wrapper ul.content .entry:last-of-type").remove()
     }
   }
 })

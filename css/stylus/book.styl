@@ -21,12 +21,24 @@
     position relative
     padding 0 65px
 
-    img.star
-      position absolute
-      top 0
-      left 0
-      margin 15px
-      width 35px
+    button
+      &.favorite
+        position absolute
+        top 0
+        left 0
+        border none
+        padding 8px
+        margin 7px
+        cursor pointer
+        background transparent
+        border-radius 100%
+        outline none
+
+        &:active
+          padding-top 9px
+
+        img.star
+          float left
 
     h1
       float left
@@ -71,14 +83,5 @@
       position relative
       z-index 10
 
-  .content
+  .content-wrapper
     min-height 21vh
-
-// 186
-// 12,-,1,43,1,2,12 + 32,-,2,44,2,2,32
-// 71 + 114
-
-// 12.8,-,-,43,-,-,12.8 + 32,-,-,44,-,-,32
-// 68.6 + 108
-
-// 2.4 / 6

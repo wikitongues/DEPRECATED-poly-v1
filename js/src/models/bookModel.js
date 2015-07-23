@@ -1,5 +1,6 @@
 App.Book = DS.Model.extend({
   title: DS.attr("string"),
+  timeCreated: DS.attr("date"),
   author: DS.attr("string"),
   url: DS.attr("string"),
   banner: DS.attr("string"),

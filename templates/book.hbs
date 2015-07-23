@@ -1,10 +1,12 @@
 <div class="book">
   <div class="info">
-    {{#if favorite}}
-      <img class="icon star" src="img/icons/i_starred.svg" alt="favorite">
-      {{else}}
-      <img class="icon star" src="img/icons/i_unstarred.svg" alt="favorite">
-    {{/if}}
+    <button class="favorite" {{action "favorite"}}>
+      {{#if favorite}}
+        <img class="icon star" src="img/icons/i_starred.svg" alt="favorite">
+        {{else}}
+        <img class="icon star" src="img/icons/i_unstarred.svg" alt="favorite">
+      {{/if}}
+    </button>
     <h1>{{title}}</h1>
     <h3>{{author}}</h3>
     <p>{{description}}</p>
@@ -20,8 +22,8 @@
       </section>
     </div>
 
-  <section class="content">
-    <ul>
+  <section class="content-wrapper">
+    <ul class="content">
       {{#each phrases}}
         <li class="entry">
           <ul>
@@ -42,7 +44,7 @@
       {{/each}}
       {{!-- {{partial "phraseInput"}} --}}
     </ul>
-    <div class="addPhrase">
+    <div class="addPhrase open">
       <button {{action "addPhrase"}}>+</button>
     </div>
     <div class="newPhrase">
