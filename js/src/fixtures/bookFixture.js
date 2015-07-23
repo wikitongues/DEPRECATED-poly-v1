@@ -40,5 +40,19 @@ App.Book.FIXTURES = [
     targetLanguage: "Northern Sotho",
     targetCode:"nso",
     phrases:[7,8,9]
+  },
+  {
+    id:4,
+    title: "Suomen Kieli On Paras Kieli",
+    author: "Omniglot",
+    url:"http://www.omniglot.com/language/phrases/finnish.php",
+    banner:"",
+    description:"A guide to help noobs get with paras kieli.",
+    favorite:true,
+    sourceLanguage: "English",
+    sourceCode:"eng",
+    targetLanguage: "Finnish",
+    targetCode:"nso",
+    phrases:[10,11,12]
   }
 ]

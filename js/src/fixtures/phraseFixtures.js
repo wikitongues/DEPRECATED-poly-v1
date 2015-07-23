@@ -53,5 +53,23 @@ App.Phrase.FIXTURES = [
     sourcePhrase:"How are you?",
     targetPhrase:"O phela jwang?"
   },
+  {
+    id:10,
+    book:4,
+    sourcePhrase:"This gentleman will pay for everything.",
+    targetPhrase:"Tämä herrasmies maksaa kaiken"
+  },
+  {
+    id:11,
+    book:4,
+    sourcePhrase:"Would you like to dance with me?",
+    targetPhrase:"Haluaisitko tanssia kanssani?"
+  },
+  {
+    id:12,
+    book:4,
+    sourcePhrase:"My hovercraft is full of eels!",
+    targetPhrase:"Ilmatyynyalukseni on täynnä ankeriaita!"
+  },
 ]
 

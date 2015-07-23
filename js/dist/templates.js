@@ -264,10 +264,10 @@ function program1(depth0,data) {
   stack1 = helpers._triageMustache.call(depth0, "book.author", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("</p>\n</section>\n<section class=\"details\">\n  <p>");
-  stack1 = helpers._triageMustache.call(depth0, "book.sourceCode", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+  stack1 = helpers._triageMustache.call(depth0, "book.sourceLanguage", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("</p>\n  <img class=\"icon cardinality\" src=\"img/icons/i_cardinality.svg\" alt=\"\">\n  <p>");
-  stack1 = helpers._triageMustache.call(depth0, "book.targetCode", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+  stack1 = helpers._triageMustache.call(depth0, "book.targetLanguage", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("</p>\n</section>\n");
   return buffer;
