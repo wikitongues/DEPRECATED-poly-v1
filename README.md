@@ -19,6 +19,7 @@ App runs on `localhost:9000`
 * add tags to books
 * fix new controller interaction
 * favoriting
+* only save new book if all inputs are complete
 
 ####Cosmetic
 * fix phrase input progress marker
