@@ -12,6 +12,7 @@ App runs on `localhost:9000`
 ####Fundamental
 * build search page
 * build settings/profile page
+* mobile
 
 ####Features
 * add created dateTime to book, phrase
