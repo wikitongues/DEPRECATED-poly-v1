@@ -1,7 +1,27 @@
-#Wikitongues Development Outline
+#Wikitongues Poly
 ***
 
-## What is Wikitongues?
+##Set-up
+Install dependencies with `$ npm install && bower install`
+
+Run app with `$ grunt`
+
+App runs on `localhost:9000`
+
+##To Do
+####Fundamental
+* build new book to model functionality
+* build search page
+* build settings/profile page
+
+####Cosmetic
+* fix phrase input progress marker
+* style new book page
+* style book page info
+
+
+
+## About [Wikitongues](www.wikitongues.org)
 Wikitongues is an international non-profit organization working to provide access to every language in the world.
 
 We define access as a spectrum ranging from the first exposure to a language, all the way to fluency, through education. To validate our assumption that there is a thirst for new forms of language content, we designed a proof of concept to quickly prove the hypothesis that exposure to unique and remote languages is widely wanted. Through the tireless work of our dynamic network of volunteers, we’ve been able to make over 200 videos in currently 130 unique languages, both spoken and signed, healthy and endangered, available on our YouTube channel.
@@ -10,30 +30,14 @@ So how many languages are there in the world? Over our first year of operations,
 
 Now that we’ve validated interest in the exposure level of access by measuring an increasing growth of views on our videos, we are keen to expand to our second tier of the access spectrum. Our first foray into education will benefit from all the learnings we’ve collected with regards to crowdsourcing and community.
 
-##Objectives for a developer community
-### What’s in it for Wikitongues
-### What do developers want to get from it
-### What technologies (TechStack) are we using?
-  + [Node](https://nodejs.org/)
-  + [Express](http://expressjs.com/)
-  + [Mongo](https://www.mongodb.org/)/[Syncano](http://www.syncano.com/)
-  + [Angular](https://angularjs.org/)/[Ember](http://emberjs.com/)
-  + [D3](http://d3js.org/)/[Raphael](http://raphaeljs.com/)
 
-### How do we do it?
-### Communication channels
+### Community
   + [Slack](http://www.wikitongues.slack.com)
+  + [Gitter](https://gitter.im/wikitongues)  
   + [IRC](http://www.irchelp.org/)
-  + [Gitter](https://gitter.im/wikitongues)
   
-### Building our open source developer community
-### Meetups
-
-## Development Projects
-[Homepage](www.wikitongues.org)
-
-Run `$Grunt` on `localhost:9000`
-
+  
+## Other Projects
 [Explore](#videos) - [Branch](https://github.com/wikitongues/Ember-Homepage/tree/watch-page)
 
 [Phrasebooks](#phrasebooks) - [Branch](https://github.com/wikitongues/Ember-Homepage/tree/poly-prototype)
