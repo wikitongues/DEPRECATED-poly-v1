@@ -10,6 +10,11 @@
   .info, .cardinality, img.banner
     float left
 
+  img.banner
+    width 100%
+    min-height 724px
+    background #5FC09F
+
   .info
     position relative
     padding 0 65px
@@ -23,7 +28,8 @@
 
     h1
       float left
-      margin .4em 0
+      margin 12px 0
+      padding 1px 1px 3px
 
     h3
       line-height 2.4em
@@ -31,8 +37,11 @@
       float right
 
     p
-      padding 2em 0
-      margin 0
+      width 100%
+      box-sizing content-box
+      min-height 44px
+      margin 2em 0
+      padding 2px 2px 4px
       float left
 
   .cardinality
@@ -57,6 +66,14 @@
       height 40px
       padding 10px
       background #fff
-      // border-radius 100%
       position relative
       z-index 10
+
+// 186
+// 12,-,1,43,1,2,12 + 32,-,2,44,2,2,32
+// 71 + 114
+
+// 12.8,-,-,43,-,-,12.8 + 32,-,-,44,-,-,32
+// 68.6 + 108
+
+// 2.4 / 6

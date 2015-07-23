@@ -251,12 +251,11 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   var buffer = '', stack1;
-  data.buffer.push("\n<section class=\"info\">\n  <span class=\"banner\"><img ");
-  data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
-    'src': ("book.banner")
-  },hashTypes:{'src': "STRING"},hashContexts:{'src': depth0},contexts:[],types:[],data:data})));
-  data.buffer.push(" alt=\"\"></span>\n  ");
-  stack1 = helpers['if'].call(depth0, "book.favorite", {hash:{},hashTypes:{},hashContexts:{},inverse:self.program(4, program4, data),fn:self.program(2, program2, data),contexts:[depth0],types:["ID"],data:data});
+  data.buffer.push("\n<section class=\"info\">\n  <span class=\"banner\">\n    ");
+  stack1 = helpers['if'].call(depth0, "book.banner", {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(2, program2, data),contexts:[depth0],types:["ID"],data:data});
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  data.buffer.push("\n  </span>\n  ");
+  stack1 = helpers['if'].call(depth0, "book.favorite", {hash:{},hashTypes:{},hashContexts:{},inverse:self.program(6, program6, data),fn:self.program(4, program4, data),contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n  <p class=\"title\">");
   stack1 = helpers._triageMustache.call(depth0, "book.title", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
@@ -275,11 +274,22 @@ function program1(depth0,data) {
   }
 function program2(depth0,data) {
   
+  var buffer = '';
+  data.buffer.push("\n      <img ");
+  data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
+    'src': ("book.banner")
+  },hashTypes:{'src': "STRING"},hashContexts:{'src': depth0},contexts:[],types:[],data:data})));
+  data.buffer.push(" alt=\"\">\n    ");
+  return buffer;
+  }
+
+function program4(depth0,data) {
+  
   
   data.buffer.push("<img class=\"icon star\" src=\"img/icons/i_starred.svg\" alt=\"favorite\">");
   }
 
-function program4(depth0,data) {
+function program6(depth0,data) {
   
   
   data.buffer.push("<img class=\"icon star\" src=\"img/icons/i_unstarred.svg\" alt=\"favorite\">");
