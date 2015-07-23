@@ -21,6 +21,9 @@ App runs on `localhost:9000`
 * favoriting
 * only save new book if all inputs are complete
 
+####Bugs
+* new phrases on old books don't persist
+
 ####Cosmetic
 * fix phrase input progress marker
  
