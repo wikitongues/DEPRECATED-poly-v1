@@ -8,9 +8,9 @@ App.BookController = Ember.ObjectController.extend({
      addPhrase: function() {
       $(".addPhrase").toggleClass("open")
       $(".newPhrase").toggleClass("open")
-      var a = $(".book").scrollTop()
-      $(".book .content-wrapper ul.content").append("<li class='entry'><ul><li class='source'><p><span class='progress'><span></span><span></span><span></span></span></p></li></ul></li>")
-      $(".book").scrollTop(a+100)
+
+      $(".book .content-wrapper ul.content").append("<li class='entry'><ul><li class='source'><p><span class='progress'><span></span><span></span><span></span></span></p></li></ul></li>")//progress object
+
     },
     saveSource: function() {
       if($(".newPhrase .input.source").val()!="") {
@@ -21,8 +21,6 @@ App.BookController = Ember.ObjectController.extend({
         $(".newPhrase .saveTarget").show()
         $(".newPhrase .input.source").val("")
       }
-      var a = $(".book").scrollTop()
-      $(".book").scrollTop(a+100)
     },
     saveTarget: function() {
       if($(".newPhrase .input.target").val()!="") {
@@ -33,9 +31,6 @@ App.BookController = Ember.ObjectController.extend({
         $(".newPhrase .input.target").val("")
         $(".newPhrase").toggleClass("open")
         $(".addPhrase").toggleClass("open")
-
-        var a = $(".book").scrollTop()
-        $(".book").scrollTop(a+100)
 
         var phrase = this.store.createRecord('phrase',{
           sourcePhrase: this.get("sourcePhrase"),
