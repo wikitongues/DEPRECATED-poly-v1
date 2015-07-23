@@ -17,9 +17,14 @@ App runs on `localhost:9000`
 ####Features
 * add created dateTime to book, phrase
 * add tags to books
+* fix new controller interaction
+* favoriting
 
 ####Cosmetic
 * fix phrase input progress marker
+ 
+####Improvements
+* refactor new phrase controller
 
 
 
