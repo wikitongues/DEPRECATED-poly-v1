@@ -9,5 +9,6 @@ App.ResetScroll = Ember.Mixin.create({
   }
 });
 
-App.ApplicationAdapter = DS.FixtureAdapter.extend({
+App.ApplicationAdapter = DS.FirebaseAdapter.extend({
+  firebase: new Firebase('https://wikitongues-poly.firebaseio.com/')
 })
