@@ -10,21 +10,25 @@ App runs on `localhost:9000`
 
 ##To Do
 ####Fundamental
-* build search page
-* build settings/profile page
-* mobile
+* Ember CLI
+* build users
+* save phrases to book
 
 ####Features
+* edit books
+* build language database
+* build settings/profile page
+* build search function
 * add created dateTime to book, phrase
 * add tags to books
-* fix new controller interaction
+* refactor new controller interaction
 * favoriting
 * only save new book if all inputs are complete
+* new book images
 
-####Bugs
-* new phrases on old books don't persist
 
 ####Cosmetic
+* fix add button on mobile
 * fix phrase input progress marker
  
 ####Improvements
