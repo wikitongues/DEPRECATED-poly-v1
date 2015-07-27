@@ -14,13 +14,13 @@
 
   <img class="banner" {{bind-attr src=banner}} alt="">
 
-    <div class="cardinality">
-      <section>
-        {{#link-to "" classNames="language source" tagName="h1" title=sourceLanguage}}{{sourceLanguage}}{{/link-to}}
-        <img class="icon cardinality" src="img/icons/i_cardinality.svg" alt="">
-        {{#link-to "" classNames="language target" tagName="h1" title=targetLanguage}}{{targetLanguage}}{{/link-to}}
-      </section>
-    </div>
+  <div class="cardinality">
+    <section>
+      {{#link-to "" classNames="language source" tagName="h1" title=sourceLanguage}}{{sourceLanguage}}{{/link-to}}
+      <img class="icon cardinality" src="img/icons/i_cardinality.svg" alt="">
+      {{#link-to "" classNames="language target" tagName="h1" title=targetLanguage}}{{targetLanguage}}{{/link-to}}
+    </section>
+  </div>
 
   <section class="content-wrapper">
     <ul class="content">
@@ -42,7 +42,6 @@
         {{else}}
         <p class="empty">Shoot! There is nothing here!</p>
       {{/each}}
-      {{!-- {{partial "phraseInput"}} --}}
     </ul>
     <div class="addPhrase open">
       <button {{action "addPhrase"}}>+</button>

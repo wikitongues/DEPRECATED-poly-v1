@@ -79,17 +79,6 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   
 });
 
-Ember.TEMPLATES["_phraseInput"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data
-/**/) {
-this.compilerInfo = [4,'>= 1.0.0'];
-helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
-  
-
-
-  data.buffer.push("<li class=\"entry entering\">\n  <ul>\n    <li class=\"source\">\n      <p>\n        <span class=\"progress\">\n          <span></span>\n          <span></span>\n          <span></span>\n        </span>\n      </p>\n    </li>\n    <li class=\"target\">\n      <p>\n        <span class=\"progress\">\n          <span></span>\n          <span></span>\n          <span></span>\n        </span>\n      </p>\n    </li>\n  </ul>\n</li>");
-  
-});
-
 Ember.TEMPLATES["application"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data
 /**/) {
 this.compilerInfo = [4,'>= 1.0.0'];
@@ -200,24 +189,24 @@ function program14(depth0,data) {
   data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
     'src': ("banner")
   },hashTypes:{'src': "ID"},hashContexts:{'src': depth0},contexts:[],types:[],data:data})));
-  data.buffer.push(" alt=\"\">\n\n    <div class=\"cardinality\">\n      <section>\n        ");
+  data.buffer.push(" alt=\"\">\n\n  <div class=\"cardinality\">\n    <section>\n      ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
     'classNames': ("language source"),
     'tagName': ("h1"),
     'title': ("sourceLanguage")
   },hashTypes:{'classNames': "STRING",'tagName': "STRING",'title': "ID"},hashContexts:{'classNames': depth0,'tagName': depth0,'title': depth0},inverse:self.noop,fn:self.program(5, program5, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "", options) : helperMissing.call(depth0, "link-to", "", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n        <img class=\"icon cardinality\" src=\"img/icons/i_cardinality.svg\" alt=\"\">\n        ");
+  data.buffer.push("\n      <img class=\"icon cardinality\" src=\"img/icons/i_cardinality.svg\" alt=\"\">\n      ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
     'classNames': ("language target"),
     'tagName': ("h1"),
     'title': ("targetLanguage")
   },hashTypes:{'classNames': "STRING",'tagName': "STRING",'title': "ID"},hashContexts:{'classNames': depth0,'tagName': depth0,'title': depth0},inverse:self.noop,fn:self.program(7, program7, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "", options) : helperMissing.call(depth0, "link-to", "", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n      </section>\n    </div>\n\n  <section class=\"content-wrapper\">\n    <ul class=\"content\">\n      ");
+  data.buffer.push("\n    </section>\n  </div>\n\n  <section class=\"content-wrapper\">\n    <ul class=\"content\">\n      ");
   stack1 = helpers.each.call(depth0, "phrases", {hash:{},hashTypes:{},hashContexts:{},inverse:self.program(14, program14, data),fn:self.program(9, program9, data),contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n      \n    </ul>\n    <div class=\"addPhrase open\">\n      <button ");
+  data.buffer.push("\n    </ul>\n    <div class=\"addPhrase open\">\n      <button ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "addPhrase", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
   data.buffer.push(">+</button>\n    </div>\n    <div class=\"newPhrase\">\n      ");
   data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
@@ -420,7 +409,9 @@ function program3(depth0,data) {
     'valueBinding': ("model.description"),
     'placeholder': ("A collection of useful phrases in Laputa, a Swiftian language spoken in Balnibarbi and a number of other islands.")
   },hashTypes:{'rows': "INTEGER",'classNames': "STRING",'valueBinding': "STRING",'placeholder': "STRING"},hashContexts:{'rows': depth0,'classNames': depth0,'valueBinding': depth0,'placeholder': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "textarea", options))));
-  data.buffer.push("\n  </div>\n\n  <img class=\"banner\" ");
+  data.buffer.push("\n  </div>\n\n    <input type=\"file\" id=\"file-chooser\" />\n\n    <button ");
+  data.buffer.push(escapeExpression(helpers.action.call(depth0, "setupAWS", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
+  data.buffer.push(" id=\"upload-button\" style=\"\">Upload to S3</button>\n    <div id=\"results\"> </div>\n  <img class=\"banner\" ");
   data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
     'src': ("banner")
   },hashTypes:{'src': "ID"},hashContexts:{'src': depth0},contexts:[],types:[],data:data})));

@@ -3,12 +3,12 @@ App.BookController = Ember.ObjectController.extend({
   targetPhrase:"",
   actions: {
     favorite: function() {
-      this.toggleProperty('favorite')
+      this.toggleProperty('favorite').save()
     },
      addPhrase: function() {
       $(".addPhrase").toggleClass("open")
       $(".newPhrase").toggleClass("open")
-
+      $("p.empty").toggle()
       $(".book .content-wrapper ul.content").append("<li class='entry'><ul><li class='source'><p><span class='progress'><span></span><span></span><span></span></span></p></li></ul></li>")//progress object
 
     },

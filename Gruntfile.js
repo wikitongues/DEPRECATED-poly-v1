@@ -43,7 +43,8 @@ module.exports = function (grunt) {
         watch: {
             files: [
                 'index.html',
-                'js/**/*.js'
+                'js/**/*.js',
+                'bower_components'
             ],
             ember_templates: {
                 files: 'templates/**/*.hbs',
