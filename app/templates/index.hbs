@@ -1,0 +1,23 @@
+<div class="container dashboard">
+  <section>
+    <h3>Books</h3>
+    <ul>
+      {{#each model as |book|}}
+        {{book-entry book=book tagName="li"}}
+      {{/each}}
+    </ul>
+  </section>
+
+{{!--   <section>
+    <h3>New</h3>
+    <ul>
+      {{#each isNew}}
+        {{book-entry book=this tagName="li"}}
+      {{/each}}
+    </ul>
+  </section> --}}
+
+  {{#link-to "new" classNames="newBook"}}
+    +
+  {{/link-to}}
+</div>

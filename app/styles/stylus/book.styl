@@ -1,0 +1,87 @@
+.book
+  width 100%
+  background #eee
+
+  .info, .cardinality, img.banner
+    display inline-block
+    width 100%
+    background #fff
+
+  .info, .cardinality, img.banner
+    float left
+
+  img.banner
+    width auto
+    min-width 100%
+    margin-top -4px
+    height 724px
+    background #5FC09F
+
+  .info
+    position relative
+    padding 0 65px
+
+    button
+      &.favorite
+        position absolute
+        top 0
+        left 0
+        border none
+        padding 8px
+        margin 7px
+        cursor pointer
+        background transparent
+        border-radius 100%
+        outline none
+
+        &:active
+          padding-top 9px
+
+        img.star
+          float left
+
+    h1
+      float left
+      margin 12px 0
+      padding 1px 1px 3px
+
+    h3
+      line-height 2.4em
+      margin-bottom 0
+      float right
+
+    p
+      width 100%
+      box-sizing content-box
+      min-height 44px
+      margin 2em 0
+      padding 2px 2px 4px
+      float left
+
+  .cardinality
+    border-bottom 3px solid rgba(0,0,0,0.1)
+
+    section
+      width 600px
+      display table
+      float none
+      margin auto
+
+    h1
+      width 50%
+      float left
+      text-align center
+
+    img
+      border-bottom none
+      float left
+      margin 1.1em -20px
+      width 40px
+      height 40px
+      padding 10px
+      background #fff
+      position relative
+      z-index 10
+
+  .content-wrapper
+    min-height 21vh

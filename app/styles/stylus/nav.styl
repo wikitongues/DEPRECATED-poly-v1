@@ -1,0 +1,43 @@
+nav
+  height 63px
+  border-bottom 3px solid #E9E9E9
+
+  img
+    float left
+
+    &.home
+      margin 10px
+
+    &.search
+      margin 15px
+
+    &.more
+      margin 7px
+      border-radius 100%
+
+      &:hover
+        background-color #f7f7f7
+
+  input
+    width 80%
+    height 60px
+    padding 1em 1em 1em 50px
+    background #f7f7f7 url("../assets/images/icons/i_search.svg") no-repeat 11px 11px / 26px 26px
+    font-size 1em
+    font-family $sans
+    font-weight 100
+    outline none
+    border 5px solid #fff
+    margin auto
+    display table
+    transition background-color $time ease-in-out
+
+    &:hover, &:active, &:focus
+      background-color #f3f3f3
+
+  button
+    float right
+    background transparent
+    border none
+    padding 0
+    cursor pointer

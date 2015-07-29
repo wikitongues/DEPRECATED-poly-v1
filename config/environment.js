@@ -4,6 +4,13 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'poly-cli',
     environment: environment,
+    contentSecurityPolicy: {
+      'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com",
+      'img-src': "'self' https://s3.amazonaws.com http://fredericoandrade.com",
+      'font-src': "'self' http://fonts.gstatic.com",
+      'style-src': "'self' http://fonts.googleapis.com"
+    },
+    firebase: 'https://wikitongues-poly.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
