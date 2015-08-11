@@ -1,40 +1,42 @@
 <div class="book">
   <div class="info">
     <button class="favorite" {{action "favorite"}}>
-      {{#if favorite}}
+      {{#if model.favorite}}
         <img class="icon star" src="/assets/images/icons/i_starred.svg" alt="favorite">
         {{else}}
         <img class="icon star" src="/assets/images/icons/i_unstarred.svg" alt="favorite">
       {{/if}}
     </button>
-    <h1>{{book.title}}</h1>
-    <h3>{{author}}</h3>
-    <p>{{description}}</p>
+    <h1>{{model.title}}</h1>
+    <h3>{{model.author}}</h3>
+    <p>{{model.description}}</p>
   </div>
 
-  <img class="banner" src={{banner}} alt="">
+  <img class="banner" src={{model.banner}} alt="">
 
     <div class="cardinality">
       <section>
-        {{#link-to "" classNames="language source" tagName="h1" title=sourceLanguage}}{{sourceLanguage}}{{/link-to}}
+        <h1 class="language source" title={{model.sourceLanguage}}>{{model.sourceLanguage}}</h1>
+        {{!-- {{#link-to "" classNames="language source" tagName="h1" title=sourceLanguage}}{{sourceLanguage}}{{/link-to}} --}}
         <img class="icon cardinality" src="/assets/images/icons/i_cardinality.svg" alt="">
-        {{#link-to "" classNames="language target" tagName="h1" title=targetLanguage}}{{targetLanguage}}{{/link-to}}
+        {{!-- {{#link-to "" classNames="language target" tagName="h1" title=targetLanguage}}{{targetLanguage}}{{/link-to}} --}}
+        <h1 class="language target" title={{model.targetLanguage}}>{{model.targetLanguage}}</h1>
       </section>
     </div>
 
   <section class="content-wrapper">
     <ul class="content">
-      {{#each phrases}}
+      {{#each model.phrases}}
         <li class="entry">
           <ul>
-            {{#if sourcePhrase}}
+            {{#if model.sourcePhrase}}
             <li class="source">
-              <p>{{sourcePhrase}}</p>
+              <p>{{model.sourcePhrase}}</p>
             </li>
             {{/if}}
-            {{#if targetPhrase}}
+            {{#if model.targetPhrase}}
             <li class="target">
-              <p>{{targetPhrase}}</p>
+              <p>{{model.targetPhrase}}</p>
             </li>
             {{/if}}
           </ul>
