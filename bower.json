@@ -1,5 +1,11 @@
 {
   "name": "poly-cli",
+  "version": "0.0.1",
+  "homepage": "https://github.com/wikitongues/ember-homepage",
+  "authors": [
+    "Freddie Andrade <faandrade@gmail.com>"
+  ],
+  "description": "Every Language in the World",
   "dependencies": {
     "ember": "1.13.7",
     "ember-cli-shims": "ember-cli/ember-cli-shims#0.0.3",
