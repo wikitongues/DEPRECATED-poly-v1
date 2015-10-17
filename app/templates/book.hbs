@@ -1,15 +1,17 @@
 <div class="book">
   <div class="info">
-    <button class="favorite" {{action "favorite"}}>
-      {{#if model.favorite}}
-        <img class="icon star" src="/assets/images/icons/i_starred.svg" alt="favorite">
-        {{else}}
-        <img class="icon star" src="/assets/images/icons/i_unstarred.svg" alt="favorite">
-      {{/if}}
-    </button>
-    <h1>{{model.title}}</h1>
-    <h3>{{model.author}}</h3>
-    <p>{{model.description}}</p>
+    <div class="wrapper">
+      <button class="favorite" {{action "favorite"}}>
+        {{#if model.favorite}}
+          <img class="icon star" src="/assets/images/icons/i_starred.svg" alt="favorite">
+          {{else}}
+          <img class="icon star" src="/assets/images/icons/i_unstarred.svg" alt="favorite">
+        {{/if}}
+      </button>
+      <h1>{{model.title}}</h1>
+      <h3>{{model.author}}</h3>
+      <p>{{model.description}}</p>
+    </div>
   </div>
 
   <img class="banner" src={{model.banner}} alt="">
@@ -17,9 +19,7 @@
     <div class="cardinality">
       <section>
         <h1 class="language source" title={{model.sourceLanguage}}>{{model.sourceLanguage}}</h1>
-        {{!-- {{#link-to "" classNames="language source" tagName="h1" title=sourceLanguage}}{{sourceLanguage}}{{/link-to}} --}}
         <img class="icon cardinality" src="/assets/images/icons/i_cardinality.svg" alt="">
-        {{!-- {{#link-to "" classNames="language target" tagName="h1" title=targetLanguage}}{{targetLanguage}}{{/link-to}} --}}
         <h1 class="language target" title={{model.targetLanguage}}>{{model.targetLanguage}}</h1>
       </section>
     </div>

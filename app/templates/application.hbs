@@ -1,5 +1,16 @@
-{{top-nav tagName="nav"}}
+<nav>
+  {{#link-to "index"}}<img class="icon home" src="/assets/images/icons/i_home.svg" alt="home">{{/link-to}}
+  {{#if session.isAuthenticated}}
+    <button>
+      <img class="icon more" src="/assets/images/icons/i_more.svg" alt="more">
+    </button>
+    <a class="login" {{action 'logout'}}>Logout</a>
+  {{else}}
+    {{#link-to 'login'  class="login"}}Login{{/link-to}}
+  {{/if}}
+
+  {{!-- {{input placeholder="Search for a tag, phrase or language"}} --}}
+  <a  class="firebase" href="https://wikitongues-poly.firebaseio.com/" target="_blank">Firebase</a>
+</nav>
 
 {{outlet}}
-
-{{footer-component}}
