@@ -1,73 +1,79 @@
 .dashboard
   float left
   width 100%
-  height 100%
-  background #fafafa
 
   h3
+    position absolute
     margin 0
     padding 1em
     font-weight 100
     color $secondary-blue
-    border-bottom 2px solid #F4F4F4
+    // background #fff
+    // border-bottom 2px solid #F4F4F4
 
   section
     ul
       padding 0
-      margin 0
+      margin 0 auto
       list-style-type none
+      width 55%
+      min-width 700px
 
       li
         font-size 1.5em
         border-bottom 2px solid #F4F4F4
-        height 100px
+        box-shadow 0 1px 2px #f4f4f4
         overflow hidden
-        background #fff
+        background #fefefe
+
+        &:last-of-type
+          border-radius 0 0 $radius $radius
 
         &:hover
-          background #fcfcfc
+          background #fff
 
         a
           display inline-block
           width 100%
           height 100%
+          padding 20px
+          float left
 
           img
             float left
             margin 30px
 
           p
-            width 60%
-            margin 0
+            margin 0 0 0 15px
             float left
 
           section
             height 100%
 
             &.info
-              width 70%
+              max-width 100*(2/3)%
+              float left
               display inline-block
 
-              .banner
-                float left
-                margin 0
-                height 100px
-                width 100px
-                display inline-block
-                overflow hidden
-                background #5FC09F
+              // .banner
+              //   float left
+              //   margin 0
+              //   height 100px
+              //   width 100px
+              //   display inline-block
+              //   overflow hidden
+              //   background #5FC09F
 
-                img
-                  margin 0 0 0 -15px
-                  float left
-                  min-width 100px
-                  height 100px
+              //   img
+              //     margin 0 0 0 -15px
+              //     float left
+              //     min-width 100px
+              //     height 100px
 
               button
                 &.favorite
                   float left
-                  padding 8px
-                  margin 22px
+                  padding 4px 0 0 0
                   border none
                   cursor pointer
                   background transparent
@@ -78,24 +84,17 @@
                     padding-top 9px
 
                   img.star
+                    height 25px
                     float left
                     margin 0
-
-              p
-                &.title
-                  padding .7em 0 .2em
-                &.author
-                  font-size .8em
-                  color $secondary-blue
+                    padding 0
 
             &.details
-              margin-right 1em
-              min-width 188px
+              max-width 100*(1/3)%
               float right
 
               .language
                 float left
-                height 98px
                 display table
                 width 100px
 
@@ -109,7 +108,7 @@
 
               img
                 float left
-                margin 1.7em 1em 0
+                margin 0
 
   .newBook
     position fixed

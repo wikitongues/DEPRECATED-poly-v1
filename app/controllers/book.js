@@ -5,7 +5,7 @@ export default Ember.Controller.extend({
   targetPhrase:"",
   actions: {
     favorite: function() {
-      this.toggleProperty('favorite');
+      this.toggleProperty('model.favorite');
     },
      addPhrase: function() {
       Ember.$(".addPhrase").toggleClass("open");

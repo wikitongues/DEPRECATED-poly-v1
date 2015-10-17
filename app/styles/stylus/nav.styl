@@ -1,6 +1,10 @@
 nav
   height 63px
-  border-bottom 3px solid #E9E9E9
+  background white
+  box-shadow 0 1px 2px rgba(0,0,0,0.1)
+  position relative
+  z-index 5
+  padding 0 30px 0 0
 
   img
     float left
@@ -41,3 +45,12 @@ nav
     border none
     padding 0
     cursor pointer
+
+  a
+    display inline-block
+    text-decoration none
+
+    &.login, &.firebase
+      padding 20px
+      float right
+      cursor pointer
