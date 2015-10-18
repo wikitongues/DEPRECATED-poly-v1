@@ -1,3 +1,5 @@
+@import 'bower_components/nib'
+
 .book
   width 100%
   background #eee
@@ -12,9 +14,10 @@
 
   img.banner
     width 100%
-    // min-width 100%
     height 400px
-    background-color #5FC09F
+    margin -3px 0
+    background rgba(77,240,153,1)
+    background linear-gradient(45deg, rgba(46,191,150,1) 0%, rgba(76,241,185,1) 100%)
 
   .info
     position relative
@@ -24,11 +27,8 @@
       width 600px
       margin auto
 
-      button
-        &.favorite
-          position absolute
-          top 0
-          left 0
+      section
+        button
           border none
           padding 8px
           margin 7px
@@ -38,10 +38,16 @@
           outline none
 
           &:active
-            padding-top 9px
+            padding 9px 8px 7px
 
-          img.star
+            img.star
+              float left
+
+          &.favorite
             float left
+
+          &.deleteBook
+            float right
 
       h1
         float left

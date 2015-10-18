@@ -6,12 +6,23 @@ export default Ember.Controller.extend({
   actions: {
     favorite: function() {
       this.toggleProperty('model.favorite');
+      this.get('model').save();
     },
-     addPhrase: function() {
+    deleteBook: function(transition) {
+      if (confirm("Are you sure?")) {
+          var author = this.get('model');
+          author.deleteRecord();
+          this.get('model').save();
+          this.transitionToRoute('/');
+        } else {
+          transition.abort();
+        }
+    },
+    addPhrase: function() {
       Ember.$(".addPhrase").toggleClass("open");
       Ember.$(".newPhrase").toggleClass("open");
 
-      Ember.$(".book .content-wrapper ul.content").append("<li class='entry'><ul><li class='source'><p><span class='progress'><span></span><span></span><span></span></span></p></li></ul></li>");//progress object
+      Ember.$(".book .content-wrapper ul.content").append("<li class='entry'><ul><li class='source'><p><span class='progress'><span></span><span></span><span></span></span></p></li></ul></li>");
 
     },
     saveSource: function() {
