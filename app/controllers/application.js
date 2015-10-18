@@ -5,7 +5,7 @@ export default Ember.Controller.extend({
   actions: {
     logout: function() {
         this.get('session').invalidate().then(function() {
-            this.transitionToRoute('login');
+            this.transitionToRoute('/');
         }.bind(this));
     }
   }

@@ -1,13 +1,18 @@
 <div class="book">
   <div class="info">
     <div class="wrapper">
-      <button class="favorite" {{action "favorite"}}>
-        {{#if model.favorite}}
-          <img class="icon star" src="/assets/images/icons/i_starred.svg" alt="favorite">
-          {{else}}
-          <img class="icon star" src="/assets/images/icons/i_unstarred.svg" alt="favorite">
-        {{/if}}
-      </button>
+      <section>
+        <button class="favorite" {{action "favorite"}}>
+          {{#if model.favorite}}
+            <img class="icon star" src="/assets/images/icons/i_starred.svg" alt="favorite">
+            {{else}}
+            <img class="icon star" src="/assets/images/icons/i_unstarred.svg" alt="favorite">
+          {{/if}}
+        </button>
+        <button class="deleteBook" {{action "deleteBook"}}>
+          <img class="icon trash" src="/assets/images/icons/i_trash.svg" alt="favorite">
+        </button>
+      </section>
       <h1>{{model.title}}</h1>
       <h3>{{model.author}}</h3>
       <p>{{model.description}}</p>
@@ -50,8 +55,8 @@
       <button {{action "addPhrase"}}>+</button>
     </div>
     <div class="newPhrase">
-      {{input classNames="input source" value="" value="sourcePhrase" placeholder="Source Phrase"  autofocus=true}}
-      {{input classNames="input target" value="" value="targetPhrase" placeholder="Target Phrase" autofocus=true}}
+      {{input class="input source" value=model.sourcePhrase placeholder="Source Phrase"  autofocus=true}}
+      {{input class="input target" value=model.targetPhrase placeholder="Target Phrase" autofocus=true}}
       <a class="icon save saveSource" {{action "saveSource"}} title="Save">+</a>
       <a class="icon save saveTarget" {{action "saveTarget"}} title="Save">+</a>
     </div>

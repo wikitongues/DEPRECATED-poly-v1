@@ -20,5 +20,8 @@
     "qunit": "~1.17.1",
     "firebase": "^2.1.0",
     "ember-simple-auth": "0.8.0"
+  },
+  "devDependencies": {
+    "nib": "~1.1.0"
   }
 }
