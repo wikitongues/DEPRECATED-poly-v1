@@ -19,10 +19,11 @@ export default Ember.Controller.extend({
     },
 
     addPhrase: function() {
+      var progressElement = "<li class='entry'><ul><li class='source'><p><span class='progress'><span></span><span></span><span></span></span></p></li></ul></li>"
       Ember.$(".addPhrase").toggleClass("open");
       Ember.$(".newPhrase").toggleClass("open");
 
-      Ember.$(".book .content-wrapper ul.content").append("<li class='entry'><ul><li class='source'><p><span class='progress'><span></span><span></span><span></span></span></p></li></ul></li>");
+      Ember.$(".book .content-wrapper ul.content").append(progressElement);
 
     },
 
@@ -48,10 +49,10 @@ export default Ember.Controller.extend({
         Ember.$(".addPhrase").toggleClass("open");
 
         var phrase = this.store.createRecord('phrase',{
-          sourcePhrase: this.get("sourcePhrase"),
-          targetPhrase: this.get("targetPhrase"),
           book: this.get('model'),
-          createdAt: new Date()
+          sourcePhrase: this.get("model.sourcePhrase"),
+          targetPhrase: this.get("model.targetPhrase"),
+          phraseTimestamp: new Date()
         });
 
         var controller = this;
@@ -60,6 +61,7 @@ export default Ember.Controller.extend({
           controller.set("targetPhrase", "");
           controller.get("model.phrases").addObject(phrase);
         });
+        this.get("model").save();
       }
       Ember.$(".book .content-wrapper ul.content .entry:last-of-type").remove();
     }
