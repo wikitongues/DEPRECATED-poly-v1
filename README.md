@@ -1,7 +1,9 @@
 # Wikitongues Poly
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This README outlines the details of collaborating on this Ember CLI application.
+
+Poly makes crowdsourcing dictionaries in any language easy and familiar. 
+For developers: help build language corpora at scale, in every language, written or not. 
 
 ## Prerequisites
 
@@ -15,7 +17,7 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone https://github.com/wikitongues/poly.git` this repository
 * change into the new directory
 * `npm install`
 * `bower install`
@@ -39,9 +41,9 @@ Make use of the many generators for code, try `ember help generate` for more det
 * `ember build` (development)
 * `ember build --environment production` (production)
 
-### Deploying
+### Deployment
 
-Specify what it takes to deploy your app.
+Make pull requests to have your contributions reviewed and deployed.
 
 ## Further Reading / Useful Links
 
@@ -50,15 +52,14 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
+* [firebase](http://www.firebase.com/)
+* [emberFire](https://www.firebase.com/docs/web/libraries/ember/)
 
 ===
 
 ##To Do
 
 ###Fundamental
-* Ember CLI
-* build users
 * save phrases to book
 
 ###Features
@@ -84,19 +85,16 @@ Specify what it takes to deploy your app.
 
 
 ## About [Wikitongues](www.wikitongues.org)
-Wikitongues is an international non-profit organization working to provide access to every language in the world.
+Wikitongues is a movement for language rights. 
+Together with speakers and signers of every langauge in the world, we're building the most inclusive cultural archive ever made, raising awareness about linguistic diversity and rallying to defend it.
 
-We define access as a spectrum ranging from the first exposure to a language, all the way to fluency, through education. To validate our assumption that there is a thirst for new forms of language content, we designed a proof of concept to quickly prove the hypothesis that exposure to unique and remote languages is widely wanted. Through the tireless work of our dynamic network of volunteers, we’ve been able to make over 200 videos in currently 130 unique languages, both spoken and signed, healthy and endangered, available on our YouTube channel.
-
-So how many languages are there in the world? Over our first year of operations, we’ve achieved exposure to just below 2% of all living languages in varying levels of depth, both through volunteer efforts and user submissions. Currently, there are around 7000 classified languages, with an unknowable number of unclassified languages.
-
-Now that we’ve validated interest in the exposure level of access by measuring an increasing growth of views on our videos, we are keen to expand to our second tier of the access spectrum. Our first foray into education will benefit from all the learnings we’ve collected with regards to crowdsourcing and community.
+Currently, there are around 7000 classified languages, with an unknowable number of unclassified languages.
 
 
 ### Community
   + [Slack](http://www.wikitongues.slack.com)
-  + [Gitter](https://gitter.im/wikitongues)
-  + [IRC](http://www.irchelp.org/)
+  <!--+ [Gitter](https://gitter.im/wikitongues)-->
+  <!--+ [IRC](http://www.irchelp.org/)-->
 
 
 ## Other Projects
