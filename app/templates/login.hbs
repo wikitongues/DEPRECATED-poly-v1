@@ -63,25 +63,19 @@
 
 </div>
 
-{{!-- <h2>or create a new account</h2>
+{{!--
+  <h2>change password</h2>
+  <form {{action 'changePassword' on='submit'}}>
+    <label for="changePasswordEmail">email</label>
+    {{input value=changePasswordEmail placeholder='email' type="email"}}
+    <label for="oldPassword">old password</label>
+    {{input value=oldPassword placeholder='old password' type="password"}}
+    <label for="changePassword">new password</label>
+    {{input value=changePasswords placeholder='new password' type="password"}}
+    <button type="submit" class="btn btn-default">Go!</button>
+  </form>
+--}}
 
-<h2>reset password</h2>
-<form {{action 'resetPassword' on='submit'}}>
-  <label for="email">reset password</label>
-  {{input value=resetPasswordEmail placeholder='email'}}
-  <button type="submit" class="btn btn-default">Go!</button>
-</form>
-
-<h2>change password</h2>
-<form {{action 'changePassword' on='submit'}}>
-  <label for="changePasswordEmail">email</label>
-  {{input value=changePasswordEmail placeholder='email' type="email"}}
-  <label for="oldPassword">old password</label>
-  {{input value=oldPassword placeholder='old password' type="password"}}
-  <label for="changePassword">new password</label>
-  {{input value=changePasswords placeholder='new password' type="password"}}
-  <button type="submit" class="btn btn-default">Go!</button>
-</form> --}}
 {{#if errorMessage}}
   <p>
     <strong>Login failed:</strong>
