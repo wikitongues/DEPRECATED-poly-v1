@@ -4,7 +4,7 @@ import UserManagement from '../mixins/user-management'
 export default Ember.Controller.extend(UserManagement, {
   session: Ember.inject.service('session'),
   actions: {
-    login: function() {
+    signIn: function() {
         this.get('session').authenticate('authenticator:firebase', {
             'email': this.get('email'),
             'password': this.get('password')

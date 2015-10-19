@@ -7,7 +7,7 @@
 </ul>
 <div class="container signIn">
 
-  <form {{action 'createAccount' on='submit'}}>
+  <form class="createAccount" {{action 'createAccount' on='submit'}}>
     <div class="grouping">
       <div class="input">
         {{input value=newUserEmail type="email" required=true}}
@@ -27,7 +27,7 @@
     <a {{action "NavigateToSignIn"}}>Sign in</a>
   </form>
 
-  <form {{action 'login' on='submit'}}>
+  <form class="signIn" {{action 'signIn' on='submit'}}>
     <div class="grouping">
       <div class="input">
         {{input value=email type="email" required=true}}
@@ -47,7 +47,7 @@
     <a {{action "NavigateToForgotPassword"}}>Forgot your password?</a>
   </form>
 
-  <form {{action 'resetPassword' on='submit'}}>
+  <form class="resetPassword" {{action 'resetPassword' on='submit'}}>
     <div class="grouping">
       <div class="input">
         {{input value=resetPasswordEmail type="email" required=true}}
