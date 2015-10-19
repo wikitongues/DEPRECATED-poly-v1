@@ -1,9 +1,16 @@
 <div class="container dashboard">
   <section>
     <h3>Books</h3>
-    <ul>
+    <ul class="sorting">
+
+    </ul>
+    <ul class="content">
+      <li class="sort favorite"><a {{action "sortBy" "favorite"}}><img class="icon star" src="/assets/images/icons/i_unstarred.svg" alt="favorite"></a></li>
+      <li class="sort name"><a {{action "sortBy" "title"}}>Name</a></li>
+      <li class="sort source"><a {{action "sortBy" "sourceLanguage"}}>Source</a></li>
+      <li class="sort target"><a {{action "sortBy" "targetLanguage"}}>Target</a></li>
       {{#each model as |book|}}
-        {{book-entry book=book tagName="li"}}
+        {{book-entry book=book tagName="li" class="content"}}
       {{/each}}
     </ul>
   </section>
@@ -18,7 +25,7 @@
   </section> --}}
 
 {{#if session.isAuthenticated}}
-  {{#link-to "new" classNames="newBook"}}
+  {{#link-to "new" class="newBook"}}
     +
   {{/link-to}}
 {{/if}}

@@ -18,10 +18,28 @@ export default Ember.Controller.extend(UserManagement, {
         );
     },
 
+    NavigateToCreateAccount: function() {
+      Ember.$("ul.counter").addClass("active").children().removeClass("active")
+      Ember.$("ul.counter li.createAccount").addClass("active")
+      Ember.$(".container").attr("class","container").addClass("createAccount")
+    },
+
+    NavigateToForgotPassword: function() {
+      Ember.$("ul.counter").addClass("active").children().removeClass("active")
+      Ember.$("ul.counter li.forgotPassword").addClass("active")
+      Ember.$(".container").attr("class","container").addClass("resetPassword")
+    },
+
+    NavigateToSignIn: function() {
+      Ember.$("ul.counter").addClass("active").children().removeClass("active")
+      Ember.$("ul.counter li.signIn").addClass("active")
+      Ember.$(".container").attr("class","container").addClass("signIn")
+    },
+
     createAccount: function() {
       this.createUser(
-        this.get('newEmail'),
-        this.get('newPassword')
+        this.get('newUserEmail'),
+        this.get('newUserPassword')
         )
     },
 

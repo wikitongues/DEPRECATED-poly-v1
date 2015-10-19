@@ -1,25 +1,77 @@
-<h1>login</h1>
-<form {{action 'login' on='submit'}}>
-  <label for="email">Login</label>
-  {{input value=email placeholder='enter login'}}
-  <label for="password">Password</label>
-  {{input value=password placeholder="enter password" type="password"}}
-  <button type="submit" class="btn btn-default">Login</button>
-</form>
-<h2>or create a new account</h2>
-<form {{action 'createAccount' on='submit'}}>
-  <label for="email">Login</label>
-  {{input value=newEmail placeholder='enter login'}}
-  <label for="password">Password</label>
-  {{input value=newPassword placeholder="enter password" type="password"}}
-  <button type="submit" class="btn btn-default">Create a new account</button>
-</form>
+<div class="login">
+<h1>Poly</h1>
+<ul class="counter">
+  <li class="createAccount" {{action "NavigateToCreateAccount"}}></li>
+  <li class="signIn active" {{action "NavigateToSignIn"}}></li>
+  <li class="forgotPassword" {{action "NavigateToForgotPassword"}}></li>
+</ul>
+<div class="container signIn">
+
+  <form {{action 'createAccount' on='submit'}}>
+    <div class="grouping">
+      <div class="input">
+        {{input value=newUserEmail type="email" required=true}}
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label for="newUserEmail">Email address</label>
+      </div>
+      <div class="input">
+        {{input value=newUserPassword type="password" required=true}}
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label for="newUserPassword">Password</label>
+      </div>
+      <button type="submit">Create a new account</button>
+    </div>
+    <a {{action "NavigateToForgotPassword"}}>Forgot your password?</a>
+    <a {{action "NavigateToSignIn"}}>Sign in</a>
+  </form>
+
+  <form {{action 'login' on='submit'}}>
+    <div class="grouping">
+      <div class="input">
+        {{input value=email type="email" required=true}}
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label for="email">Email address</label>
+      </div>
+      <div class="input">
+        {{input value=password type="password" required=true}}
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label for="password">Password</label>
+      </div>
+      <button type="submit">Sign in</button>
+    </div>
+    <a {{action "NavigateToCreateAccount"}}>Create an account</a>
+    <a {{action "NavigateToForgotPassword"}}>Forgot your password?</a>
+  </form>
+
+  <form {{action 'resetPassword' on='submit'}}>
+    <div class="grouping">
+      <div class="input">
+        {{input value=resetPasswordEmail type="email" required=true}}
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label for="resetPasswordEmail">Email address</label>
+      </div>
+      <button type="submit">Reset Password</button>
+    </div>
+    <a {{action "NavigateToSignIn"}}>Sign in</a>
+    <a {{action "NavigateToCreateAccount"}}>Create an account</a>
+  </form>
+
+</div>
+
+{{!-- <h2>or create a new account</h2>
+
 <h2>reset password</h2>
 <form {{action 'resetPassword' on='submit'}}>
   <label for="email">reset password</label>
   {{input value=resetPasswordEmail placeholder='email'}}
   <button type="submit" class="btn btn-default">Go!</button>
 </form>
+
 <h2>change password</h2>
 <form {{action 'changePassword' on='submit'}}>
   <label for="changePasswordEmail">email</label>
@@ -29,10 +81,13 @@
   <label for="changePassword">new password</label>
   {{input value=changePasswords placeholder='new password' type="password"}}
   <button type="submit" class="btn btn-default">Go!</button>
-</form>
+</form> --}}
 {{#if errorMessage}}
   <p>
     <strong>Login failed:</strong>
     <code>{{errorMessage}}</code>
   </p>
 {{/if}}
+</div>
+
+
