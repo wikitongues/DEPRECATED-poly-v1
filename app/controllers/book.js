@@ -19,12 +19,11 @@ export default Ember.Controller.extend({
     },
 
     addPhrase: function() {
+      console.log("hi")
       var progressElement = "<li class='entry'><ul><li class='source'><p><span class='progress'><span></span><span></span><span></span></span></p></li></ul></li>"
-      Ember.$(".addPhrase").toggleClass("open");
+      // Ember.$(".addPhrase").toggleClass("open");
       Ember.$(".newPhrase").toggleClass("open");
-
       Ember.$(".book .content-wrapper ul.content").append(progressElement);
-
     },
 
     saveSource: function() {

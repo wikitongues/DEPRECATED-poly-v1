@@ -34,14 +34,14 @@
       {{#each model.phrases}}
         <li class="entry">
           <ul>
-            {{#if model.sourcePhrase}}
+            {{#if sourcePhrase}}
             <li class="source">
-              <p>{{model.sourcePhrase}}</p>
+              <p>{{sourcePhrase}}</p>
             </li>
             {{/if}}
-            {{#if model.targetPhrase}}
+            {{#if targetPhrase}}
             <li class="target">
-              <p>{{model.targetPhrase}}</p>
+              <p>{{targetPhrase}}</p>
             </li>
             {{/if}}
           </ul>
@@ -55,7 +55,7 @@
       <button {{action "addPhrase"}}>+</button>
     </div>
     <div class="newPhrase">
-      {{input class="input source" value=model.sourcePhrase placeholder="Source Phrase"  autofocus=true}}
+      {{input class="input source" value=model.sourcePhrase placeholder="Source Phrase" autofocus=true}}
       {{input class="input target" value=model.targetPhrase placeholder="Target Phrase" autofocus=true}}
       <a class="icon save saveSource" {{action "saveSource"}} title="Save">+</a>
       <a class="icon save saveTarget" {{action "saveTarget"}} title="Save">+</a>
