@@ -9,7 +9,7 @@ export default Ember.Controller.extend({
       this.get('model').save();
     },
 
-    deleteBook: function(transition) {
+    deleteBook: function() {
       if (confirm("Are you sure?")) {
           var author = this.get('model');
           author.deleteRecord();

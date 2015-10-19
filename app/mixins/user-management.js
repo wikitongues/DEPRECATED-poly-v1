@@ -14,7 +14,7 @@ export default Ember.Mixin.create({
       } else {
         console.log("Successfully created user account with uid:", userData.uid);
       }
-    })
+    });
   },
 
   resetPassword: function(email) {
@@ -26,7 +26,7 @@ export default Ember.Mixin.create({
       } else {
         console.log("Error sending password reset email:", error);
       }
-    })
+    });
   },
 
   changePassword: function(email, oldPassword, newPassword) {

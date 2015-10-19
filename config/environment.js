@@ -7,8 +7,8 @@ module.exports = function(environment) {
     contentSecurityPolicy: {
       'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com",
       'img-src': "'self' https://s3.amazonaws.com http://fredericoandrade.com",
-      'font-src': "'self' http://fonts.gstatic.com",
-      'style-src': "'self' http://fonts.googleapis.com"
+      'font-src': "'self' https://fonts.gstatic.com",
+      'style-src': "'self' https://fonts.googleapis.com"
     },
     firebase: 'https://wikitongues-poly.firebaseio.com/',
     baseURL: '/',
