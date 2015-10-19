@@ -1,0 +1,9 @@
+{
+  "firebase": "wikitongues-poly",
+  "public": "dist",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
