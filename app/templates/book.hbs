@@ -49,12 +49,11 @@
         {{else}}
         <p class="empty">Shoot! There is nothing here!</p>
       {{/each}}
-      {{!-- {{partial "phraseInput"}} --}}
     </ul>
     <div class="addPhrase open">
       <button {{action "addPhrase"}}>+</button>
     </div>
-    <div class="newPhrase">
+    <div class="newPhrase open">
       {{input class="input source" value=model.sourcePhrase placeholder="Source Phrase" autofocus=true}}
       {{input class="input target" value=model.targetPhrase placeholder="Target Phrase" autofocus=true}}
       <a class="icon save saveSource" {{action "saveSource"}} title="Save">+</a>
