@@ -8,16 +8,16 @@ export default Ember.Controller.extend({
       this.toggleProperty('model.favorite');
       this.get('model').save();
     },
+
     deleteBook: function(transition) {
       if (confirm("Are you sure?")) {
           var author = this.get('model');
           author.deleteRecord();
           this.get('model').save();
           this.transitionToRoute('/');
-        } else {
-          transition.abort();
         }
     },
+
     addPhrase: function() {
       Ember.$(".addPhrase").toggleClass("open");
       Ember.$(".newPhrase").toggleClass("open");
@@ -25,6 +25,7 @@ export default Ember.Controller.extend({
       Ember.$(".book .content-wrapper ul.content").append("<li class='entry'><ul><li class='source'><p><span class='progress'><span></span><span></span><span></span></span></p></li></ul></li>");
 
     },
+
     saveSource: function() {
       if(Ember.$(".newPhrase .input.source").val()!=="") {
         Ember.$(".book .content-wrapper ul.content .entry:last-of-type ul li.source p").html(Ember.$(".newPhrase .input.source").val()).parent().parent().append("<li class='target'><p><span class='progress'><span></span><span></span><span></span></span></p></li>");
@@ -35,6 +36,7 @@ export default Ember.Controller.extend({
         Ember.$(".newPhrase .input.source").val("");
       }
     },
+
     saveTarget: function() {
       if(Ember.$(".newPhrase .input.target").val()!=="") {
         Ember.$(".newPhrase .input.source").show();
@@ -51,6 +53,7 @@ export default Ember.Controller.extend({
           book: this.get('model'),
           createdAt: new Date()
         });
+
         var controller = this;
         phrase.save().then(function(phrase) {
           controller.set("sourcePhrase", "");

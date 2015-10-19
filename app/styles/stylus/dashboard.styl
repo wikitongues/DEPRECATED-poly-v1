@@ -8,11 +8,10 @@
     padding 1em
     font-weight 100
     color $secondary-blue
-    // background #fff
-    // border-bottom 2px solid #F4F4F4
 
   section
     ul
+      background #fff
       padding 0
       margin 0 auto
       list-style-type none
@@ -21,94 +20,146 @@
 
       li
         font-size 1.5em
-        border-bottom 2px solid #F4F4F4
-        box-shadow 0 1px 2px #f4f4f4
         overflow hidden
         background #fefefe
+        display table
 
-        &:last-of-type
-          border-radius 0 0 $radius $radius
-
-        &:hover
-          background #fff
-
-        a
-          display inline-block
-          width 100%
-          height 100%
-          padding 20px
-          float left
-
-          img
+        &.sort
+          &.favorite
             float left
-            margin 30px
+            width 65px
 
-          p
-            margin 0 0 0 15px
-            float left
-
-          section
-            height 100%
-
-            &.info
-              max-width 100*(2/3)%
-              float left
-              display inline-block
-
-              // .banner
-              //   float left
-              //   margin 0
-              //   height 100px
-              //   width 100px
-              //   display inline-block
-              //   overflow hidden
-              //   background #5FC09F
-
-              //   img
-              //     margin 0 0 0 -15px
-              //     float left
-              //     min-width 100px
-              //     height 100px
-
-              button
-                &.favorite
-                  float left
-                  padding 4px 0 0 0
-                  border none
-                  cursor pointer
-                  background transparent
-                  border-radius 100%
-                  outline none
-
-                  &:active
-                    padding-top 9px
-
-                  img.star
-                    height 25px
-                    float left
-                    margin 0
-                    padding 0
-
-            &.details
-              max-width 100*(1/3)%
-              float right
-
-              .language
-                float left
-                display table
-                width 100px
-
-                p
-                  vertical-align middle
-                  display table-cell
-                  text-align center
-                  float none
-                  padding 0
-                  font-size .7em
+            a
+              padding 0
 
               img
+                display block
+                margin 2px auto 0
+                padding 0
+                width 20px
+
+          &.name
+            width auto
+            float left
+
+            a
+              padding-left 0
+              text-align left
+
+          &.source
+            float right
+            width 100px
+            margin-right 20px
+
+          &.target
+            float right
+            margin-right 20px
+            width 100px
+
+          a
+            width 100%
+            text-align center
+            font-size 14px
+            float left
+            display inline-block
+            padding 10px
+            background transparent
+            color #ddd
+            cursor pointer
+
+            &:hover
+              color #ccc
+
+        &.content
+          border-top 2px solid $border
+          box-shadow 0 1px 2px $border
+          width 100%
+
+
+          &:last-of-type
+            border-bottom 2px solid $border
+            border-radius 0 0 $radius $radius
+
+          &:hover
+            background #fff
+
+          a
+            display inline-block
+            width 100%
+            height 100%
+            padding 20px
+            float left
+
+            img
+              float left
+              margin 30px
+
+            p
+              margin 0 0 0 15px
+              float left
+
+            section
+              height 100%
+
+              &.info
+                max-width 100*(2/3)%
                 float left
-                margin 0
+                display inline-block
+
+                // .banner
+                //   float left
+                //   margin 0
+                //   height 100px
+                //   width 100px
+                //   display inline-block
+                //   overflow hidden
+                //   background #5FC09F
+
+                //   img
+                //     margin 0 0 0 -15px
+                //     float left
+                //     min-width 100px
+                //     height 100px
+
+                button
+                  &.favorite
+                    float left
+                    padding 4px 0 0 0
+                    border none
+                    cursor pointer
+                    background transparent
+                    border-radius 100%
+                    outline none
+
+                    &:active
+                      padding-top 9px
+
+                    img.star
+                      height 25px
+                      float left
+                      margin 0
+                      padding 0
+
+              &.details
+                max-width 100*(1/3)%
+                float right
+
+                .language
+                  float left
+                  display table
+                  width 100px
+
+                  p
+                    vertical-align middle
+                    display table-cell
+                    text-align center
+                    float none
+                    padding 0
+                    font-size .7em
+
+                img
+                  float left
+                  margin 0
 
   .newBook
     position fixed
