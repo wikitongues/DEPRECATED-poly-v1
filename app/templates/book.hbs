@@ -19,7 +19,9 @@
     </div>
   </div>
 
-  <img class="banner" src={{model.banner}} alt="">
+  {{#if model.banner}}
+    <div class="bannerWrapper" style="background-image: url({{model.banner}})"></div>
+  {{/if}}
 
     <div class="cardinality">
       <section>

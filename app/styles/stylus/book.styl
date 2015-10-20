@@ -10,12 +10,22 @@
   .info, .cardinality, img.banner
     float left
 
-  img.banner
-    width 100%
+  .bannerWrapper
     height 400px
-    margin -3px 0
-    background rgba(77,240,153,1)
-    background linear-gradient(45deg, rgba(46,191,150,1) 0%, rgba(76,241,185,1) 100%)
+    overflow hidden
+    width 100%
+    position relative
+    background-size cover
+    background-position center
+
+    // img.banner
+    //   position absolute
+    //   top 0
+    //   width 100%
+    //   height auto
+    //   margin -3px 0
+    //   background rgba(77,240,153,1)
+    //   background linear-gradient(45deg, rgba(46,191,150,1) 0%, rgba(76,241,185,1) 100%)
 
   .info
     position relative
