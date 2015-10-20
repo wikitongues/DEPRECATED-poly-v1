@@ -53,9 +53,9 @@
     <div class="addPhrase open">
       <button {{action "addPhrase"}}>+</button>
     </div>
-    <div class="newPhrase open">
-      {{input class="input source" value=model.sourcePhrase placeholder="Source Phrase" autofocus=true}}
-      {{input class="input target" value=model.targetPhrase placeholder="Target Phrase" autofocus=true}}
+    <div class="newPhrase">
+      {{input class="input source" value=model.sourcePhrase placeholder="Source Phrase"}}
+      {{input class="input target" value=model.targetPhrase placeholder="Target Phrase"}}
       <a class="icon save saveSource" {{action "saveSource"}} title="Save">+</a>
       <a class="icon save saveTarget" {{action "saveTarget"}} title="Save">+</a>
     </div>

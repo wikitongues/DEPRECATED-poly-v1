@@ -5,8 +5,8 @@
     float left
     display none
 
-    // &.open
-    //   display block
+    &.open
+      display block
 
     button
       materialButton()
@@ -19,10 +19,11 @@
       cursor pointer
 
   .newPhrase
+    height 0
     float left
     width 100%
-    position absolute
-    bottom 0
+    // position absolute
+    // bottom 0
     box-shadow 0 -1px 2px rgba(0,0,0,0.1)
     overflow hidden
     transition height $time ease-in-out margin-top $time ease-in-out margin-bottom $time ease-in-out
