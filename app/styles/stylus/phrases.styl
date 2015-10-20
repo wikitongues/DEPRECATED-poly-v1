@@ -17,6 +17,10 @@
       margin 0
       display inline-block
       float left
+      transition background $time*2 ease-in-out
+
+      &:hover
+        background lighten(#E7EFF2, 80%)
 
       p.empty
         text-align center
@@ -32,6 +36,12 @@
         border-top 1px solid
         border-bottom 1px solid
         border-color transparent
+        transition background $time*2 ease-in-out
+
+        &:hover
+          background white
+          border-top-color lighten(#E7EFF2, 70%)
+          border-bottom-color lighten(#E7EFF2, 70%)
 
         &:last-of-type
           border-bottom none
