@@ -19,7 +19,7 @@ export default Ember.Controller.extend({
     },
 
     addPhrase: function() {
-      var progressElement = "<li class='entry' id='progressElement'><ul><li class='source'><p><span class='progress'><span></span><span></span><span></span></span></p></li></ul></li>"
+      var progressElement = "<li class='entry' id='progressElement'><ul><li class='source'><p><span class='progress'><span></span><span></span><span></span></span></p></li></ul></li>";
       Ember.$(".addPhrase").toggleClass("open");
       Ember.$(".newPhrase").toggleClass("open");
       Ember.$(".book .content-wrapper ul.content").append(progressElement);
@@ -28,20 +28,20 @@ export default Ember.Controller.extend({
 
     saveSource: function() {
       var sourceVal = Ember.$(".newPhrase .input.source").val(),
-      progressElement = "<li class='target'><p><span class='progress'><span></span><span></span><span></span></span></p></li>"
+      progressElement = "<li class='target'><p><span class='progress'><span></span><span></span><span></span></span></p></li>";
       if(Ember.$(".newPhrase .input.source").val()!=="") {
-        Ember.$("#progressElement li.source p").html(sourceVal)
+        Ember.$("#progressElement li.source p").html(sourceVal);
         Ember.$("#progressElement ul").append(progressElement);
-        Ember.$(".newPhrase").children("input.source, .saveSource").hide()
-        Ember.$(".newPhrase").children("input.target, .saveTarget").show()
+        Ember.$(".newPhrase").children("input.source, .saveSource").hide();
+        Ember.$(".newPhrase").children("input.target, .saveTarget").show();
         Ember.$(".newPhrase .input.source").val("");
       }
     },
 
     saveTarget: function() {
       if(Ember.$(".newPhrase .input.target").val()!=="") {
-        Ember.$(".newPhrase").children("input.target, .saveTarget").hide()
-        Ember.$(".newPhrase").children("input.source, .saveSource").show()
+        Ember.$(".newPhrase").children("input.target, .saveTarget").hide();
+        Ember.$(".newPhrase").children("input.source, .saveSource").show();
         Ember.$(".newPhrase .input.target").val("");
         Ember.$(".newPhrase, .addPhrase").toggleClass("open");
 
