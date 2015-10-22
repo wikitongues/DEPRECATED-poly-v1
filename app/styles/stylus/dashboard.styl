@@ -17,11 +17,15 @@
       list-style-type none
       width 55%
       min-width 700px
+      box-shadow 0 1px 2px rgba(0,0,0,0.1)
+      transition background $time*2 ease-in-out
+
+      &:hover
+        background lighten(#E7EFF2, 80%)
 
       li
         font-size 1.5em
         overflow hidden
-        background #fefefe
         display table
 
         &.sort
@@ -71,17 +75,16 @@
               color #ccc
 
         &.content
-          border-top 2px solid $border
-          box-shadow 0 1px 2px $border
+          border-bottom 1px solid lighten(#E7EFF2, 75%)
           width 100%
-
+          transition background $time*2 ease-in-out
 
           &:last-of-type
-            border-bottom 2px solid $border
             border-radius 0 0 $radius $radius
 
           &:hover
             background #fff
+            border-bottom-color lighten(#E7EFF2, 55%)
 
           a
             display inline-block
