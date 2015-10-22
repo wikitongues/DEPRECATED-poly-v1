@@ -1,9 +1,9 @@
 <nav>
   {{#link-to "index"}}<img class="icon home" src="/assets/images/icons/i_home.svg" alt="home">{{/link-to}}
   {{#if session.isAuthenticated}}
-    <button>
+    {{!-- <button>
       <img class="icon more" src="/assets/images/icons/i_more.svg" alt="more">
-    </button>
+    </button> --}}
     <a class="signInButton" {{action 'logout'}}>Sign out</a>
   {{else}}
     {{#link-to 'login'  class="signInButton"}}Sign in{{/link-to}}
@@ -14,3 +14,5 @@
 </nav>
 
 {{outlet}}
+
+<p class="version">0.0.1</p>
