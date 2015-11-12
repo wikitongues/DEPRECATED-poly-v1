@@ -1,0 +1,18 @@
+{{#each model.phrases as |phrase|}}
+  <li class="entry">
+    <ul>
+      {{#if phrase.sourcePhrase}}
+      <li class="source">
+        <p>{{phrase.sourcePhrase}}</p>
+      </li>
+      {{/if}}
+      {{#if phrase.targetPhrase}}
+      <li class="target">
+        <p>{{phrase.targetPhrase}}</p>
+      </li>
+      {{/if}}
+    </ul>
+  </li>
+  {{else}}
+  <p class="empty">Start adding phrases by clicking on the button below.</p>
+{{/each}}

@@ -18,9 +18,9 @@
         {{else}}
         <h1>{{model.title}}</h1>
       {{/if}}
-      {{#if model.author}}
+      {{!-- {{#if model.author}}
         <h3>{{model.author}}</h3>
-      {{/if}}
+      {{/if}} --}}
       {{#if model.description}}
         <p>{{model.description}}</p>
       {{/if}}
@@ -41,26 +41,27 @@
 
   <section class="content-wrapper">
     <ul class="content">
-      {{#each model.phrases}}
+{{!--       {{#each model.phrases as |phrase|}}
         <li class="entry">
           <ul>
-            {{#if sourcePhrase}}
+            {{#if phrase.sourcePhrase}}
             <li class="source">
-              <p>{{sourcePhrase}}</p>
+              <p>{{phrase.sourcePhrase}}</p>
             </li>
             {{/if}}
-            {{#if targetPhrase}}
+            {{#if phrase.targetPhrase}}
             <li class="target">
-              <p>{{targetPhrase}}</p>
+              <p>{{phrase.targetPhrase}}</p>
             </li>
             {{/if}}
           </ul>
         </li>
         {{else}}
         <p class="empty">Shoot! There is nothing here!</p>
-      {{/each}}
+      {{/each}} --}}
+      {{phrase-content model=model}}
     </ul>
-    {{#if session.isAuthenticated}}
+{{!--     {{#if session.isAuthenticated}}
       <div class="addPhrase open">
         <button {{action "addPhrase"}}>+</button>
       </div>
@@ -70,6 +71,7 @@
         <a class="icon save saveSource" {{action "saveSource"}} title="Save">+</a>
         <a class="icon save saveTarget" {{action "saveTarget"}} title="Save">+</a>
       </div>
-    {{/if}}
+    {{/if}} --}}
+    {{new-phrase model=model}}
   </section>
 </div>

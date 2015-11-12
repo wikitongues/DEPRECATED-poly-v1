@@ -20,9 +20,38 @@
     </div>
 
   <section class="content-wrapper">
-    <h1>To add a phrase, <br>click the button below!</h1>
-    <div class="addPhrase open">
-      <button {{action "saveBook"}}>+</button>
-    </div>
+    <ul class="dummy content">
+      <li class="entry">
+        <ul>
+          <li class="source">
+            <p>Welcome</p>
+          </li>
+          <li class="target">
+            <p>Bem-vinda</p>
+          </li>
+        </ul>
+      </li>
+      <li class="entry">
+        <ul>
+          <li class="source">
+            <p>Hello (General greeting)</p>
+          </li>
+          <li class="target">
+            <p>Oi!</p>
+          </li>
+        </ul>
+      </li>
+      <li class="entry">
+        <ul>
+          <li class="source">
+            <p>Reply to 'How are you?'</p>
+          </li>
+          <li class="target">
+            <p>Bem obrigada. E você?</p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <button class={{if disabled "startBook disabled" "startBook"}} {{action "saveBook"}}>Get started</button>
   </section>
 </div>
