@@ -15,32 +15,6 @@
     text-align center
     font-size 3em
 
-  ul.counter
-    list-style-type none
-    margin auto
-    display table
-    padding 0
-    opacity 0
-    transition opacity ease-in-out $time
-
-    &.active
-      opacity 1
-
-    li
-      float left
-      margin 2px
-      width 8px
-      height 8px
-      background #f4f4f4
-      border 1px solid #f0f0f0
-      border-radius 100%
-      transition all ease-in-out $time*2
-      cursor pointer
-
-      &.active
-        background $hover
-        border 1px solid $hover
-
   a
     cursor pointer
     color lighten($blue, 35%)
