@@ -23,12 +23,12 @@ export default Ember.Controller.extend(UserManagement, {
     },
 
     signIn: function() {
-        this._signInUser(this.get('email'), this.get('password'))
+        this._signInUser(this.get('email'), this.get('password'));
     },
 
     createAccount: function() {
-      var email = this.get('newUserEmail')
-      var password = this.get('newUserPassword')
+      var email = this.get('newUserEmail');
+      var password = this.get('newUserPassword');
 
       this.createUser(
         email,
@@ -37,18 +37,18 @@ export default Ember.Controller.extend(UserManagement, {
           if (error) {
               console.log("Error creating user:", error);
             } else {
-               var store = this.get('model.store')
+               // var store = this.get('model.store');
                var user = this.store.createRecord('user',{
                 email: email,
                 uid: userData.uid,
                 picture: "boobies"
               });
                user.save().then(() => {
-                  this._signInUser(email, password)
-               })
+                  this._signInUser(email, password);
+               });
             }
           }
-      )
+      );
     },
 
     resetPassword: function() {
@@ -80,6 +80,6 @@ export default Ember.Controller.extend(UserManagement, {
           function(reason) {
             this.set('errorMessage', reason.message);
           }.bind(this)
-        )
+        );
     }
 });

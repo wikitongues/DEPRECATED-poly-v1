@@ -7,17 +7,17 @@ export default Ember.Component.extend({
   isTargetActive: false,
   actions: {
     addPhrase: function() {
-      this.set('isInactive', false)
-      this.set('isActive', true)
-      this.set('isSourceActive', true)
-      Ember.$('body').animate({scrollTop: Ember.$(document).innerHeight()},300)
+      this.set('isInactive', false);
+      this.set('isActive', true);
+      this.set('isSourceActive', true);
+      Ember.$('body').animate({scrollTop: Ember.$(document).innerHeight()},300);
       // create record
     },
 
     saveSource: function() {
       if(Ember.$(".newPhrase .input").val()!=="") {
-        this.set('isSourceActive', false)
-        this.set('isTargetActive', true)
+        this.set('isSourceActive', false);
+        this.set('isTargetActive', true);
         Ember.$(".newPhrase .input.source").val("");
         // set source
       }
@@ -25,17 +25,14 @@ export default Ember.Component.extend({
 
     saveTarget: function() {
       if(Ember.$(".newPhrase .input.target").val()!=="") {
-        this.set('isTargetActive', false)
-        this.set('isInactive', true)
-        // Ember.$(".newPhrase").children("input.target, .saveTarget").hide();
-        // Ember.$(".newPhrase").children("input.source, .saveSource").show();
-        // Ember.$(".newPhrase .input.target").val("");
-        // Ember.$(".newPhrase, .addPhrase").toggleClass("open");
+        this.set('isTargetActive', false);
+        this.set('isInactive', true);
+        Ember.$(".newPhrase .input.target").val("");
 
         // set target
         // save phrase object
 
-        var store = this.get('model.store')
+        var store = this.get('model.store');
         var controller = this;
         var phrase = store.createRecord('phrase',{
           book: this.get('model'),
