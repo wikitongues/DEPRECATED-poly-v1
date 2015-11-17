@@ -23,23 +23,31 @@ export default Ember.Controller.extend(UserManagement, {
     },
 
     signIn: function() {
-        this.get('session').authenticate('authenticator:firebase', {
-            'email': this.get('email'),
-            'password': this.get('password')
-        }).then(
-          function() {
-            this.transitionToRoute('index');
-          }.bind(this),
-          function(reason) {
-            this.set('errorMessage', reason.message);
-          }.bind(this)
-        );
+        this._signInUser(this.get('email'), this.get('password'))
     },
 
     createAccount: function() {
+      var email = this.get('newUserEmail')
+      var password = this.get('newUserPassword')
+
       this.createUser(
-        this.get('newUserEmail'),
-        this.get('newUserPassword')
+        email,
+        this.get('newUserPassword'),
+        (error, userData)  => {
+          if (error) {
+              console.log("Error creating user:", error);
+            } else {
+               var store = this.get('model.store')
+               var user = this.store.createRecord('user',{
+                email: email,
+                uid: userData.uid,
+                picture: "boobies"
+              });
+               user.save().then(() => {
+                  this._signInUser(email, password)
+               })
+            }
+          }
       )
     },
 
@@ -60,5 +68,18 @@ export default Ember.Controller.extend(UserManagement, {
     // for future reference,
     // delete users
     // changing emails
-  }
+  },
+    _signInUser(email, password) {
+         this.get('session').authenticate('authenticator:firebase', {
+            'email': email,
+            'password': password
+        }).then(
+          function() {
+            this.transitionToRoute('index');
+          }.bind(this),
+          function(reason) {
+            this.set('errorMessage', reason.message);
+          }.bind(this)
+        )
+    }
 });

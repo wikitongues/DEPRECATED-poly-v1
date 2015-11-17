@@ -39,39 +39,6 @@
     </section>
   </div>
 
-  <section class="content-wrapper">
-    <ul class="content">
-{{!--       {{#each model.phrases as |phrase|}}
-        <li class="entry">
-          <ul>
-            {{#if phrase.sourcePhrase}}
-            <li class="source">
-              <p>{{phrase.sourcePhrase}}</p>
-            </li>
-            {{/if}}
-            {{#if phrase.targetPhrase}}
-            <li class="target">
-              <p>{{phrase.targetPhrase}}</p>
-            </li>
-            {{/if}}
-          </ul>
-        </li>
-        {{else}}
-        <p class="empty">Shoot! There is nothing here!</p>
-      {{/each}} --}}
-      {{phrase-content model=model}}
-    </ul>
-{{!--     {{#if session.isAuthenticated}}
-      <div class="addPhrase open">
-        <button {{action "addPhrase"}}>+</button>
-      </div>
-      <div class="newPhrase">
-        {{input class="input source" value=model.sourcePhrase placeholder="Source Phrase"}}
-        {{input class="input target" value=model.targetPhrase placeholder="Target Phrase"}}
-        <a class="icon save saveSource" {{action "saveSource"}} title="Save">+</a>
-        <a class="icon save saveTarget" {{action "saveTarget"}} title="Save">+</a>
-      </div>
-    {{/if}} --}}
-    {{new-phrase model=model}}
-  </section>
+  {{content-block model=model}}
+
 </div>

@@ -10,6 +10,7 @@ export default Ember.Controller.extend({
     var authData = ref.getAuth();
     // this.get('model').set('username', authData.uid)
     return this.get("authData.uid")
+    console.log(authData.uid)
   })
 
 

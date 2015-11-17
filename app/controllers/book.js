@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  sourcePhrase:"",
+  sourcePhrase:"hello",
   targetPhrase:"",
   actions: {
     favorite: function() {

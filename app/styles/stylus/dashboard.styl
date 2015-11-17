@@ -90,7 +90,6 @@
             display inline-block
             width 100%
             height 100%
-            padding 20px
             float left
 
             img
@@ -98,36 +97,50 @@
               margin 30px
 
             p
-              margin 0 0 0 15px
+              margin 34px 0 34px 20px
               float left
+              width 320px
+              overflow hidden
+              text-overflow ellipsis
+              white-space nowrap
+
+              &.unauthenticated
+                width 370px
 
             section
               height 100%
 
               &.info
-                max-width 100*(2/3)%
+                width 70%
                 float left
                 display inline-block
 
-                // .banner
-                //   float left
-                //   margin 0
-                //   height 100px
-                //   width 100px
-                //   display inline-block
-                //   overflow hidden
-                //   background #5FC09F
+                .banner
+                  float left
+                  margin 0
+                  height 100px
+                  width 100px
+                  display inline-block
+                  overflow hidden
+                  background #62eaba
+                  background -moz-linear-gradient(-45deg, #62eaba 0%, #24c9b3 100%)
+                  background -webkit-linear-gradient(-45deg, #62eaba 0%,#24c9b3 100%)
+                  background linear-gradient(135deg, #62eaba 0%,#24c9b3 100%)
+                  position relative
 
-                //   img
-                //     margin 0 0 0 -15px
-                //     float left
-                //     min-width 100px
-                //     height 100px
+                  img
+                    margin 0
+                    position absolute
+                    left 50%
+                    transform translateX(-50%)
+                    min-width 100px
+                    height 100px
 
                 button
                   &.favorite
                     float left
                     padding 4px 0 0 0
+                    margin 34px 0 34px 20px
                     border none
                     cursor pointer
                     background transparent
@@ -144,25 +157,31 @@
                       padding 0
 
               &.details
-                max-width 100*(1/3)%
+                width 30%
                 float right
+                position relative
 
                 .language
                   float left
-                  display table
-                  width 100px
+                  width 100%
 
                   p
-                    vertical-align middle
-                    display table-cell
                     text-align center
                     float none
-                    padding 0
+                    padding 0 10px
                     font-size .7em
+                    width 100%
+                    line-height 1.9
+                    margin 9px 0
 
                 img
                   float left
                   margin 0
+                  padding 4px
+                  position absolute
+                  right 50%
+                  top 50%
+                  transform translateX(50%) translateY(-50%) rotateZ(90deg)
 
   .newBook
     position fixed

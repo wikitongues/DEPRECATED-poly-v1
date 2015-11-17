@@ -1,0 +1,65 @@
+<section class="content-wrapper">
+  <ul class="content">
+    {{#each model.phrases as |phrase|}}
+      <li class="entry">
+        <ul>
+          {{#if phrase.sourcePhrase}}
+            <li class="source">
+              <p>{{phrase.sourcePhrase}}</p>
+            </li>
+          {{/if}}
+          {{#if phrase.targetPhrase}}
+            <li class="target">
+              <p>{{phrase.targetPhrase}}</p>
+            </li>
+          {{/if}}
+        </ul>
+      </li>
+      {{else}}
+      {{#if isInactive}}
+        <p class="empty">Start adding phrases by clicking on the button below.</p>
+      {{/if}}
+    {{/each}}
+
+    {{#if isActive}}
+      <li class='entry' id='progressElement'>
+        <ul>
+          {{#if isSourceActive}}
+            <li class='source'>
+              {{phrase-progress}}
+            </li>
+          {{/if}}
+          {{#if isTargetActive}}
+            <li class="source">
+              <p>{{model.sourcePhrase}}</p>
+            </li>
+            <li class='target'>
+              {{phrase-progress}}
+            </li>
+          {{/if}}
+        </ul>
+      </li>
+    {{/if}}
+  </ul>
+
+  {{#if session.isAuthenticated}}
+    {{#if isInactive}}
+      <div class="addPhrase">
+        <button {{action "addPhrase"}}>+</button>
+      </div>
+    {{/if}}
+    {{#if isActive}}
+      <div class="newPhrase">
+        {{#if isSourceActive}}
+          {{input class="input" value=model.sourcePhrase placeholder="Source Phrase"}}
+          <a class="icon save" {{action "saveSource"}} title="Save">+</a>
+        {{/if}}
+        {{#if isTargetActive}}
+          {{input class="input" value=model.targetPhrase placeholder="Target Phrase"}}
+          <a class="icon save" {{action "saveTarget"}} title="Save">+</a>
+        {{/if}}
+      </div>
+    {{/if}}
+  {{/if}}
+
+</section>
