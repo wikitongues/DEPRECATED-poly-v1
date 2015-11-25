@@ -19,44 +19,111 @@ nav
 
     &.more
       margin 7px
-      border-radius 100%
+      position relative
+      z-index 1
 
-      &:hover
-        background-color #f7f7f7
+    &.sort
+      margin 13px
+      position relative
+      z-index 1
 
-  input
-    width 80%
-    height 60px
-    padding 1em 1em 1em 50px
-    background #f7f7f7 url("../assets/images/icons/i_search.svg") no-repeat 11px 11px / 26px 26px
-    font-size 1em
-    font-family $sans
-    font-weight 100
-    outline none
-    border 5px solid #fff
+  .searchBar
+    width 55%
+    height 62px
     margin auto
-    display table
-    transition background-color $time ease-in-out
+    position absolute
+    left 50%
+    transform translateX(-50%)
+    top 0
 
-    &:hover, &:active, &:focus
-      background-color #f3f3f3
+    img
+      position relative
+      z-index 2
+
+      &:hover~input, &:active~input, &:focus~input
+        background-color #F7F7F7
+
+      &.sort
+        float right
+
+    input
+      width 100%
+      position absolute
+      z-index 1
+      left 0
+      padding 1em 1em 1em 55px
+      font-size 1em
+      font-family $sans
+      font-weight 100
+      outline none
+      border 4px solid #fff
+      transition all $time ease-in-out
+
+      &:hover, &:active, &:focus
+        background-color #F7F7F7
 
   button
+    outline none
     float right
     background transparent
     border none
     padding 0
     cursor pointer
+    position relative
+
+    .buttonBackground
+      height 0px
+      width 0px
+      display block
+      position absolute
+      z-index 0
+      background #f7f7f7
+      margin 29.5px
+      border-radius 100%
+      transition all $time ease-in-out
+
+    &:hover
+      .buttonBackground
+        height 45px
+        width 45px
+        margin 7px
 
   a
     display inline-block
     text-decoration none
+    cursor pointer
 
     &.signInButton, &.firebase
-      padding 20px
+      padding 20px 0
       float right
-      cursor pointer
       box-shadow none
 
     &:visited
       background transparent
+
+.menu
+  border-left 3px solid $hover
+  width auto
+  position absolute
+  top 63px
+  background white
+  right 0px
+  z-index 4
+  boxShadow()
+  transition background $time*2 ease-in-out
+
+  &:hover
+    background-color #fafcfc
+
+  a
+    width 150px
+    padding 15px
+    display block
+    cursor pointer
+    text-decoration none
+
+    &:hover
+      background-color #FFFFFF
+
+    &:not(:last-of-type)
+      border-bottom 1px solid #f4f4f4

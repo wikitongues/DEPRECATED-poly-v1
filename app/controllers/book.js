@@ -1,8 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  sourcePhrase:"hello",
-  targetPhrase:"",
   actions: {
     favorite: function() {
       this.toggleProperty('model.favorite');
