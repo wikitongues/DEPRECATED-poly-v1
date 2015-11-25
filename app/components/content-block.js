@@ -5,6 +5,7 @@ export default Ember.Component.extend({
   isActive: false,
   isSourceActive: false,
   isTargetActive: false,
+  stopSource: false,
   actions: {
     addPhrase: function() {
       this.set('isInactive', false);
@@ -18,7 +19,6 @@ export default Ember.Component.extend({
       if(Ember.$(".newPhrase .input").val()!=="") {
         this.set('isSourceActive', false);
         this.set('isTargetActive', true);
-        Ember.$(".newPhrase .input.source").val("");
         // set source
       }
     },
@@ -26,8 +26,8 @@ export default Ember.Component.extend({
     saveTarget: function() {
       if(Ember.$(".newPhrase .input.target").val()!=="") {
         this.set('isTargetActive', false);
+        this.set('isActive', false);
         this.set('isInactive', true);
-        Ember.$(".newPhrase .input.target").val("");
 
         // set target
         // save phrase object
@@ -43,14 +43,20 @@ export default Ember.Component.extend({
 
         phrase.save().then(function(phrase) {
           controller.get("model.phrases").addObject(phrase);
-          controller.set("sourcePhrase", "");
-          controller.set("targetPhrase", "");
+          controller.set("model.sourcePhrase", "");
+          controller.set("model.targetPhrase", "");
         });
 
         this.get("model").save();
       }
 
       Ember.$("#progressElement").remove();
+    },
+
+    stopSource: function() {
+      this.set('isInactive', true);
+      this.set('isActive', false);
+      this.set('isSourceActive', false);
     }
   }
 });

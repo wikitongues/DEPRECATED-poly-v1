@@ -1,8 +1,27 @@
+{{#if session.isAuthenticated}}
+  <button class="sort" {{action "toggleSort"}} >
+    <img class="icon sort" src="/assets/images/icons/i_sort.svg" alt="sort">
+    <span class="buttonBackground"></span>
+  </button>
+{{/if}}
+
 <div class="container dashboard">
   <section>
     <h3>Books</h3>
+
+    {{#if sortOpen}}
+      <ul class="sort">
+        <li>Sort by:</li>
+        <li class="favorite" title="Newest">{{#link-to (query-params sortBy='timeCreated' order='desc')}}Newest{{/link-to}}</li>
+        <li class="favorite" title="Favorite">{{#link-to (query-params sortBy='favorite' order='desc')}}<img class="icon star" src="/assets/images/icons/i_starred.svg" alt="favorite">{{/link-to}}</li>
+        <li class="name" title="Title">{{#link-to (query-params sortBy='title' order='asc')}}Title A-Z{{/link-to}}</li>
+        <li class="source" title="Source Language">{{#link-to (query-params sortBy='sourceLanguage' order='asc')}}Source A-Z{{/link-to}}</li>
+        <li class="target" title="Target Language">{{#link-to (query-params sortBy='targetLanguage' order='asc')}}Target A-Z{{/link-to}}</li>
+      </ul>
+    {{/if}}
+
     <ul class="content">
-      {{#each model as |book|}}
+      {{#each sortedBooks as |book|}}
         {{book-entry book=book tagName="li" class="content"}}
       {{/each}}
     </ul>

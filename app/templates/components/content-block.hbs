@@ -1,3 +1,8 @@
+{{!-- {{#if isInactive}}
+  <div class="progressBar">
+    <span class="bar"></span>
+  </div>
+{{/if}} --}}
 <section class="content-wrapper">
   <ul class="content">
     {{#each model.phrases as |phrase|}}
@@ -14,6 +19,7 @@
             </li>
           {{/if}}
         </ul>
+
       </li>
       {{else}}
       {{#if isInactive}}
@@ -48,15 +54,22 @@
         <button {{action "addPhrase"}}>+</button>
       </div>
     {{/if}}
+
     {{#if isActive}}
       <div class="newPhrase">
         {{#if isSourceActive}}
-          {{input class="input" value=model.sourcePhrase placeholder="Source Phrase"}}
-          <a class="icon save" {{action "saveSource"}} title="Save">+</a>
+          {{input class="input" value=model.sourcePhrase placeholder="Source Phrase" focus-out="stopSource"}}
+          <a class="savePhrase" {{action "saveSource"}} title="Save">
+            {{!-- <img class="icon check" src="/assets/images/icons/i_check.svg" alt="check"> --}}
+            Save
+          </a>
         {{/if}}
         {{#if isTargetActive}}
           {{input class="input" value=model.targetPhrase placeholder="Target Phrase"}}
-          <a class="icon save" {{action "saveTarget"}} title="Save">+</a>
+          <a class="savePhrase" {{action "saveTarget"}} title="Save">
+            {{!-- <img class="icon check" src="/assets/images/icons/i_check.svg" alt="check"> --}}
+            Save
+          </a>
         {{/if}}
       </div>
     {{/if}}

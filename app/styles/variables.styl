@@ -52,3 +52,13 @@ materialButton()
   text-align center
   line-height 1.2em
   border-radius 100%
+
+placeholder-color(color)
+  &::-webkit-input-placeholder
+     color color !important
+  &:-moz-placeholder  /* Firefox 18- */
+     color color !important
+  &::-moz-placeholder  /* Firefox 19+ */
+     color color !important
+  &:-ms-input-placeholder
+     color color !important
