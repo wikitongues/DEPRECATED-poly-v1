@@ -3,18 +3,13 @@ import ENV from '../config/environment';
 
 export default Ember.Mixin.create({
   firebase: new Firebase(ENV.firebase),
-  createUser: function(email, password) {
+  createUser: function(email, password, callback) {
     this.firebase.createUser({
       email: email,
       password: password
     },
-    function(error, userData) {
-      if (error) {
-        console.log("Error creating user:", error);
-      } else {
-        console.log("Successfully created user account with uid:", userData.uid);
-      }
-    });
+      callback
+    );
   },
 
   resetPassword: function(email) {

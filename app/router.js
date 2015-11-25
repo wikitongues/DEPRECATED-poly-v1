@@ -9,7 +9,7 @@ Router.map(function() {
   this.route('book', {path:'/books/:book_id'});
   this.route('new');
   this.route('login');
-  this.route('profile');
+  this.route('profile', {path:'/:user_id/profile'});
 });
 
 export default Router;

@@ -1,10 +1,10 @@
 {{#link-to 'book' book.id}}
 <section class="info">
-  {{!-- <span class="banner">
+  <span class="banner">
     {{#if book.banner}}
       <img src={{book.banner}} alt="">
     {{/if}}
-  </span> --}}
+  </span>
   {{#if session.isAuthenticated}}
     <button class="favorite" {{action "favorite" bubbles=false}}>
       {{#if book.favorite}}
@@ -13,17 +13,19 @@
         <img class="icon star" src="/assets/images/icons/i_unstarred.svg" alt="favorite">
       {{/if}}
     </button>
+    <p class="title" title={{book.title}}>{{book.title}}</p>
+  {{else}}
+    <p class="title unauthenticated" title={{book.title}}>{{book.title}}</p>
   {{/if}}
-  <p class="title">{{book.title}}</p>
   {{!-- <p class="author">{{book.author}}</p> --}}
 </section>
 <section class="details">
   <span class="source language">
-    <p>{{book.sourceLanguage}}</p>
+    <p title={{book.sourceLanguage}}>{{book.sourceLanguage}}</p>
   </span>
   <img class="icon cardinality" src="/assets/images/icons/i_cardinality.svg" alt="">
   <span class="target language">
-    <p>{{book.targetLanguage}}</p>
+    <p title={{book.targetLanguage}}>{{book.targetLanguage}}</p>
   </span>
 </section>
 {{/link-to}}

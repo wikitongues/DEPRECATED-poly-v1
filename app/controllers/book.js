@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  sourcePhrase:"",
+  sourcePhrase:"hello",
   targetPhrase:"",
   actions: {
     favorite: function() {
@@ -10,7 +10,7 @@ export default Ember.Controller.extend({
     },
 
     deleteBook: function() {
-      var model = this
+      var model = this;
       if (confirm("Are you sure?")) {
         this.get('model.phrases').invoke('destroyRecord');
         this.get('model').destroyRecord().then(function() {

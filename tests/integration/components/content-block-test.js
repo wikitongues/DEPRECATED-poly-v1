@@ -2,7 +2,7 @@ import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
 
-moduleForComponent('new-phrase', 'Integration | Component | new phrase', {
+moduleForComponent('content-block', 'Integration | Component | content block', {
   integration: true
 });
 
@@ -12,15 +12,15 @@ test('it renders', function(assert) {
   // Set any properties with this.set('myProperty', 'value');
   // Handle any actions with this.on('myAction', function(val) { ... });
 
-  this.render(hbs`{{new-phrase}}`);
+  this.render(hbs`{{content-block}}`);
 
   assert.equal(this.$().text(), '');
 
   // Template block usage:
   this.render(hbs`
-    {{#new-phrase}}
+    {{#content-block}}
       template block text
-    {{/new-phrase}}
+    {{/content-block}}
   `);
 
   assert.equal(this.$().text().trim(), 'template block text');
