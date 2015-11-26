@@ -61,7 +61,6 @@
     font-size 26px
 
     nav
-      padding 0
       height auto
       display inline-block
       font-size 40px
@@ -70,17 +69,67 @@
         float left
 
         img.icon.home
-          height 75px
+          height 100px
 
         img.icon.more
           height 75px
           padding 20px
+
+        &.signInButton
+          padding 30px 0
+
+      .searchBar
+        display none
+
+      button
+        img
+          &.more
+            height 65px !important
+            margin 25px
+
+        span
+          display none !important
+
+    .menu
+      top 111px
+      right -291px
+
+      a
+        font-size 1.5em
+        width 225px
+        padding 20px
+
+        &:first-of-type
+          &:after
+            border-width 25px
+            margin-left 30px
+
+          &:before
+            border-width 27px
+            margin-left 28px
+
+    button
+      &.sort
+        height 65px
+        width 65px
+        margin 27px
+        right -200px
+
+        img
+          height 65px !important
+          top 0
+          left 0
+
+      span
+        display none !important
 
     .container
       section
         h3
           width 100%
           position initial
+          font-size 1.6em
+          text-align center
 
         .content
           width 100%
@@ -96,12 +145,23 @@
                     img.icon.star
                       height 45px
 
+                  .banner
+                    height 117px
+                    width 117px
+
+                    img
+                      min-width 118px
+                      height 118px
+
                   p.title
-                    width 90%
+                    width 70%
                     white-space nowrap
                     text-overflow ellipsis
                     overflow hidden
                     height 50px
+
+                    &.unauthenticated
+                      width 80%
 
                 &.details
                   display none
@@ -116,6 +176,21 @@
         font-size 4em
 
     .book
+      .info
+        padding 0 30px
+
+        .wrapper
+          width 100%
+
+          section
+            button
+              &.favorite
+                margin 15px 0
+                padding 8px 8px 8px 0
+
+                img
+                  height 50px
+
       .content-wrapper
         width 100%
 
@@ -171,7 +246,9 @@
             &:last-of-type
               float right
 
-
+    .version
+      float none
+      display inline-block
 
 /* Portrait */
 // @media only screen
