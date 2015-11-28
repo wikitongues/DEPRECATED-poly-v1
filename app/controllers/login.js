@@ -3,23 +3,26 @@ import UserManagement from '../mixins/user-management';
 
 export default Ember.Controller.extend(UserManagement, {
   session: Ember.inject.service('session'),
+  creatingAccount: false,
+  signingIn: true,
+  resettingPassword: false,
   actions: {
     NavigateToCreateAccount: function() {
-      Ember.$("ul.counter").addClass("active").children().removeClass("active");
-      Ember.$("ul.counter li.createAccount").addClass("active");
-      Ember.$(".container").attr("class","container").addClass("createAccount");
+      this.set("signingIn", false)
+      this.set("resettingPassword", false)
+      this.set("creatingAccount", true)
     },
 
     NavigateToForgotPassword: function() {
-      Ember.$("ul.counter").addClass("active").children().removeClass("active");
-      Ember.$("ul.counter li.forgotPassword").addClass("active");
-      Ember.$(".container").attr("class","container").addClass("resetPassword");
+      this.set("signingIn", false)
+      this.set("resettingPassword", true)
+      this.set("creatingAccount", false)
     },
 
     NavigateToSignIn: function() {
-      Ember.$("ul.counter").addClass("active").children().removeClass("active");
-      Ember.$("ul.counter li.signIn").addClass("active");
-      Ember.$(".container").attr("class","container").addClass("signIn");
+      this.set("signingIn", true)
+      this.set("resettingPassword", false)
+      this.set("creatingAccount", false)
     },
 
     signIn: function() {

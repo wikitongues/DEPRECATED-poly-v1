@@ -3,59 +3,65 @@
 
 <div class="container signIn">
 
-  <form class="createAccount" {{action 'createAccount' on='submit'}}>
-    <div class="grouping">
-      <div class="input">
-        {{input value=newUserEmail type="email" required=true}}
-        <span class="highlight"></span>
-        <span class="bar"></span>
-        <label for="newUserEmail">Email address</label>
+  {{#if creatingAccount}}
+    <form class="createAccount" {{action 'createAccount' on='submit'}}>
+      <div class="grouping">
+        <div class="input">
+          {{input value=newUserEmail type="email" required=true}}
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label for="newUserEmail">Email address</label>
+        </div>
+        <div class="input">
+          {{input value=newUserPassword type="password" required=true}}
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label for="newUserPassword">Password</label>
+        </div>
+        <button type="submit">Create a new account</button>
       </div>
-      <div class="input">
-        {{input value=newUserPassword type="password" required=true}}
-        <span class="highlight"></span>
-        <span class="bar"></span>
-        <label for="newUserPassword">Password</label>
-      </div>
-      <button type="submit">Create a new account</button>
-    </div>
-    <a {{action "NavigateToForgotPassword"}}>Forgot your password?</a>
-    <a {{action "NavigateToSignIn"}}>Sign in</a>
-  </form>
+      <a {{action "NavigateToForgotPassword"}}>Forgot your password?</a>
+      <a {{action "NavigateToSignIn"}}>Sign in</a>
+    </form>
+  {{/if}}
 
-  <form class="signIn" {{action 'signIn' on='submit'}}>
-    <div class="grouping">
-      <div class="input">
-        {{input value=email type="email" required=true}}
-        <span class="highlight"></span>
-        <span class="bar"></span>
-        <label for="email">Email address</label>
+  {{#if signingIn}}
+    <form class="signIn" {{action 'signIn' on='submit'}}>
+      <div class="grouping">
+        <div class="input">
+          {{input value=email type="email" required=true}}
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label for="email">Email address</label>
+        </div>
+        <div class="input">
+          {{input value=password type="password" required=true}}
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label for="password">Password</label>
+        </div>
+        <button type="submit">Sign in</button>
       </div>
-      <div class="input">
-        {{input value=password type="password" required=true}}
-        <span class="highlight"></span>
-        <span class="bar"></span>
-        <label for="password">Password</label>
-      </div>
-      <button type="submit">Sign in</button>
-    </div>
-    <a {{action "NavigateToCreateAccount"}}>Create an account</a>
-    <a {{action "NavigateToForgotPassword"}}>Forgot your password?</a>
-  </form>
+      {{!-- <a {{action "NavigateToCreateAccount"}}>Create an account</a> --}}
+      <a {{action "NavigateToForgotPassword"}}>Forgot your password?</a>
+    </form>
+  {{/if}}
 
-  <form class="resetPassword" {{action 'resetPassword' on='submit'}}>
-    <div class="grouping">
-      <div class="input">
-        {{input value=resetPasswordEmail type="email" required=true}}
-        <span class="highlight"></span>
-        <span class="bar"></span>
-        <label for="resetPasswordEmail">Email address</label>
+  {{#if resettingPassword}}
+    <form class="resetPassword" {{action 'resetPassword' on='submit'}}>
+      <div class="grouping">
+        <div class="input">
+          {{input value=resetPasswordEmail type="email" required=true}}
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label for="resetPasswordEmail">Email address</label>
+        </div>
+        <button type="submit">Reset Password</button>
       </div>
-      <button type="submit">Reset Password</button>
-    </div>
-    <a {{action "NavigateToSignIn"}}>Sign in</a>
-    <a {{action "NavigateToCreateAccount"}}>Create an account</a>
-  </form>
+      <a {{action "NavigateToSignIn"}}>Go to sign in</a>
+      {{!-- <a {{action "NavigateToCreateAccount"}}>Create an account</a> --}}
+    </form>
+  {{/if}}
 
 </div>
 

@@ -44,6 +44,7 @@
     .content-wrapper
       height 27.5%
       position relative
+      background #fff
 
       .dummy.content
         pointer-events none
@@ -79,7 +80,7 @@
 
 
       .startBook
-        position absolute
+        // position absolute
         background $buttonBlue
         color white
         border none
@@ -88,11 +89,9 @@
         font-weight 100
         display block
         cursor pointer
-        z-index 10
-        bottom 0
-        width 100%
-        border-radius 0
-        margin-bottom 0
+        min-width 45%
+        border-radius 3px
+        margin 0 auto 20px
         transition margin-bottom $time ease-in-out
 
         &.disabled
