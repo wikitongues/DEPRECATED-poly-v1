@@ -96,7 +96,7 @@
 
       .menu
         top 111px
-        right -291px
+        right -300px
 
         a
           font-size 1.5em
@@ -106,11 +106,11 @@
           &:first-of-type
             &:after
               border-width 25px
-              margin-left 30px
+              margin-left 52px
 
             &:before
               border-width 27px
-              margin-left 28px
+              margin-left 50px
 
       button
         &.sort
@@ -203,10 +203,10 @@
                 img
                   height 50px
 
-        &.new
-          .cardinality
+        .cardinality,
+        &.new .cardinality
             section
-              width initial
+              width 100%
 
               input
                 font-size 1.2em
@@ -223,9 +223,20 @@
 
           .content
             li.entry
+              padding .3em .7em
+
+              &:first-of-type
+                padding-top .5em
+              &:last-of-type
+                padding-bottom 7em
+              &#progressElement
+                padding-bottom .7em
+
               ul
                 li
                   &.source
+                    margin-bottom 10px
+
                   p
                     border-radius 50px 50px 50px 0
 
@@ -265,11 +276,13 @@
               height 120px
               width 120px
               padding 0
+              font-size 104px
 
           .newPhrase
             input
               width 78%
-              padding 2em
+              padding 1.2em
+              height initial
 
             a.savePhrase
               margin 0

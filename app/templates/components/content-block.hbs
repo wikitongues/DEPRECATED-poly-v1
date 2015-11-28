@@ -58,16 +58,14 @@
     {{#if isActive}}
       <div class="newPhrase">
         {{#if isSourceActive}}
-          {{input class="input" value=model.sourcePhrase placeholder="Source Phrase" focus-out="stopSource"}}
+          {{input class="input" value=model.sourcePhrase placeholder="Source Phrase" enter="saveSource" autofocus="autofocus"}}
           <a class="savePhrase" {{action "saveSource"}} title="Save">
-            {{!-- <img class="icon check" src="/assets/images/icons/i_check.svg" alt="check"> --}}
             Save
           </a>
         {{/if}}
         {{#if isTargetActive}}
-          {{input class="input" value=model.targetPhrase placeholder="Target Phrase"}}
+          {{input class="input" value=model.targetPhrase placeholder="Target Phrase" enter="saveTarget" autofocus="autofocus"}}
           <a class="savePhrase" {{action "saveTarget"}} title="Save">
-            {{!-- <img class="icon check" src="/assets/images/icons/i_check.svg" alt="check"> --}}
             Save
           </a>
         {{/if}}
