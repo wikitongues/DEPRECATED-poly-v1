@@ -1,14 +1,12 @@
 .login
   width 600px
-  position relative
-  left 50%
-  transform translateX(-50%)
   background white
   boxShadow()
   padding 40px 0
-  display inline-block
-  overflow hidden
+  display block
   border-radius $radius
+  margin auto
+  overflow auto
 
   h1
     width 100%
@@ -18,23 +16,13 @@
   a
     cursor pointer
     color lighten($blue, 35%)
-
-    &:last-of-type
-      float right
+    width 100%
+    display inline-block
+    text-align center
 
   .container
-    width 1800px
     position relative
     transition margin-left $time*2 ease-in-out
-
-    &.createAccount
-      margin-left 0
-
-    &.signIn
-      margin-left -600px
-
-    &.resetPassword
-      margin-left -1200px
 
     form
       float left
@@ -43,4 +31,4 @@
 
       &.resetPassword
         button
-          margin-top 160px
+          margin-top 140px

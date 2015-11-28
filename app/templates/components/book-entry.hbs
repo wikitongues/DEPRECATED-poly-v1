@@ -3,6 +3,8 @@
   <span class="banner">
     {{#if book.banner}}
       <img src={{book.banner}} alt="">
+      {{else}}
+      <img src="assets/images/default/leaves.jpg" alt="">
     {{/if}}
   </span>
   {{#if session.isAuthenticated}}
