@@ -23,7 +23,12 @@
 </nav>
 
 {{#if menuOpen}}
-  {{side-menu}}
+  {{#if session.isAuthenticated}}
+    <div class="menu">
+      {{#link-to 'profile' class="signInButton"}}Profile{{/link-to}}
+      <a class="signInButton" {{action 'logout'}}>Sign out</a>
+    </div>
+  {{/if}}
 {{/if}}
 
 {{outlet}}

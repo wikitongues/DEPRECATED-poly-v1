@@ -8,21 +8,21 @@ export default Ember.Controller.extend(UserManagement, {
   resettingPassword: false,
   actions: {
     NavigateToCreateAccount: function() {
-      this.set("signingIn", false)
-      this.set("resettingPassword", false)
-      this.set("creatingAccount", true)
+      this.set("signingIn", false);
+      this.set("resettingPassword", false);
+      this.set("creatingAccount", true);
     },
 
     NavigateToForgotPassword: function() {
-      this.set("signingIn", false)
-      this.set("resettingPassword", true)
-      this.set("creatingAccount", false)
+      this.set("signingIn", false);
+      this.set("resettingPassword", true);
+      this.set("creatingAccount", false);
     },
 
     NavigateToSignIn: function() {
-      this.set("signingIn", true)
-      this.set("resettingPassword", false)
-      this.set("creatingAccount", false)
+      this.set("signingIn", true);
+      this.set("resettingPassword", false);
+      this.set("creatingAccount", false);
     },
 
     signIn: function() {
