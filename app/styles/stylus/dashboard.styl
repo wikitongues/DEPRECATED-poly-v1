@@ -89,8 +89,9 @@ button.sort
 
 
           a
-            margin 0 5px
-            float left
+            margin 0 auto
+            text-align center
+            display block
             text-decoration none
 
             cursor pointer
@@ -107,7 +108,7 @@ button.sort
         display table
 
         &.content
-          border-bottom 1px solid lighten(#E7EFF2, 75%)
+          border-bottom 1px solid lighten(#E7EFF2, 35%)
           width 100%
           transition background $time*2 ease-in-out
 
@@ -129,21 +130,19 @@ button.sort
               margin 30px
 
             p
-              margin 34px 0 34px 20px
+              margin 15px 0 0 20px
               float left
-              width 320px
               overflow hidden
               text-overflow ellipsis
               white-space nowrap
 
-              &.unauthenticated
-                width 370px
-
             section
               height 100%
+              display inline-block
+              width 70%
 
               &.info
-                width 70%
+                width 100%
                 float left
                 display inline-block
 
@@ -172,7 +171,7 @@ button.sort
                   &.favorite
                     float left
                     padding 4px 0 0 0
-                    margin 34px 0 34px 20px
+                    margin 14px 0 0 20px
                     border none
                     cursor pointer
                     background transparent
@@ -189,31 +188,25 @@ button.sort
                       padding 0
 
               &.details
-                width 30%
-                float right
-                position relative
+                width 70%
+                float left
+                margin-left 55px
 
                 .language
                   float left
-                  width 100%
+                  font-weight 100
 
                   p
                     text-align center
-                    float none
                     padding 0 10px
                     font-size .7em
-                    width 100%
                     line-height 1.9
-                    margin 9px 0
+                    margin 0
 
                 img
                   float left
-                  margin 0
+                  margin 6px 0 0
                   padding 4px
-                  position absolute
-                  right 50%
-                  top 50%
-                  transform translateX(50%) translateY(-50%) rotateZ(90deg)
 
   .newBook
     position fixed
@@ -221,8 +214,3 @@ button.sort
     left 50%
     margin-left -30px
     materialButton()
-    // background #4799FC
-    // text-shadow 0 2px 0 #336FB0
-    // color white
-    // box-shadow 0 1px 0 #336FB0, 0 2px 4px rgba(34,84,137,0.5)
-    // border-top 1px solid #68ABFD !important

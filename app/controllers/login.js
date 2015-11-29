@@ -40,7 +40,6 @@ export default Ember.Controller.extend(UserManagement, {
           if (error) {
               console.log("Error creating user:", error);
             } else {
-               // var store = this.get('model.store');
                var user = this.store.createRecord('user',{
                 email: email,
                 uid: userData.uid,

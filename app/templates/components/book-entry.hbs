@@ -8,26 +8,30 @@
     {{/if}}
   </span>
   {{#if session.isAuthenticated}}
-    <button class="favorite" {{action "favorite" bubbles=false}}>
-      {{#if book.favorite}}
-        <img class="icon star" src="/assets/images/icons/i_starred.svg" alt="favorite">
-        {{else}}
-        <img class="icon star" src="/assets/images/icons/i_unstarred.svg" alt="favorite">
-      {{/if}}
-    </button>
-    <p class="title" title={{book.title}}>{{book.title}}</p>
-  {{else}}
-    <p class="title unauthenticated" title={{book.title}}>{{book.title}}</p>
+    <section>
+      <button class="favorite" {{action "favorite" bubbles=false}}>
+        {{#if book.favorite}}
+          <img class="icon star" src="/assets/images/icons/i_starred.svg" alt="favorite">
+          {{else}}
+          <img class="icon star" src="/assets/images/icons/i_unstarred.svg" alt="favorite">
+        {{/if}}
+      </button>
+      <p class="title" title={{book.title}}>{{book.title}}</p>
+    </section>
+    {{else}}
+    <section>
+      <p class="title unauthenticated" title={{book.title}}>{{book.title}}</p>
+    </section>
   {{/if}}
   {{!-- <p class="author">{{book.author}}</p> --}}
-</section>
-<section class="details">
-  <span class="source language">
-    <p title={{book.sourceLanguage}}>{{book.sourceLanguage}}</p>
-  </span>
-  <img class="icon cardinality" src="/assets/images/icons/i_cardinality.svg" alt="">
-  <span class="target language">
-    <p title={{book.targetLanguage}}>{{book.targetLanguage}}</p>
-  </span>
+  <section class="details">
+    <span class="source language">
+      <p title={{book.sourceLanguage}}>{{book.sourceLanguage}}</p>
+    </span>
+    <img class="icon cardinality" src="/assets/images/icons/i_cardinality.svg" alt="">
+    <span class="target language">
+      <p title={{book.targetLanguage}}>{{book.targetLanguage}}</p>
+    </span>
+  </section>
 </section>
 {{/link-to}}
