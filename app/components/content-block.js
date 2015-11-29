@@ -47,10 +47,10 @@ export default Ember.Component.extend({
           controller.set("model.targetPhrase", "");
         });
 
+        debugger
+
         this.get("model").save();
       }
-
-      Ember.$("#progressElement").remove();
     },
 
     stopSource: function() {
