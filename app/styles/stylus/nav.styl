@@ -27,41 +27,6 @@ nav
       position relative
       z-index 1
 
-  .searchBar
-    width 55%
-    height 62px
-    margin auto
-    position absolute
-    left 50%
-    transform translateX(-50%)
-    top 0
-
-    img
-      position relative
-      z-index 2
-
-      &:hover~input, &:active~input, &:focus~input
-        background-color #F7F7F7
-
-      &.sort
-        float right
-
-    input
-      width 100%
-      position absolute
-      z-index 1
-      left 0
-      padding 1em 1em 1em 55px
-      font-size 1em
-      font-family $sans
-      font-weight 100
-      outline none
-      border 4px solid #fff
-      transition all $time ease-in-out
-
-      &:hover, &:active, &:focus
-        background-color #F7F7F7
-
   button
     outline none
     float right

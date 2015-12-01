@@ -9,10 +9,12 @@
               {{else}}
               <img class="icon star" src="/assets/images/icons/i_unstarred.svg" alt="favorite">
             {{/if}}
+            <span class="buttonBackground"></span>
           </button>
           <h1 title={{model.title}}>{{model.title}}</h1>
           <button class="deleteBook" {{action "deleteBook"}}>
             <img class="icon trash" src="/assets/images/icons/i_trash.svg" alt="favorite">
+            <span class="buttonBackground"></span>
           </button>
         </section>
         {{else}}
