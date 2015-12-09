@@ -47,8 +47,6 @@ export default Ember.Component.extend({
           controller.set("model.targetPhrase", "");
         });
 
-        debugger
-
         this.get("model").save();
       }
     },
