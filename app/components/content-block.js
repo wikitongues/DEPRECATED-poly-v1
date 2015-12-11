@@ -6,7 +6,28 @@ export default Ember.Component.extend({
   isSourceActive: false,
   isTargetActive: false,
   stopSource: false,
+  textInput: true,
+  audioInput: false,
+  videoInput: false,
   actions: {
+    textInput: function() {
+      this.set('textInput',true);
+      this.set('audioInput',false);
+      this.set('videoInput',false);
+    },
+
+    audioInput: function() {
+      this.set('textInput',false);
+      this.set('audioInput',true);
+      this.set('videoInput',false);
+    },
+
+    videoInput: function() {
+      this.set('textInput',false);
+      this.set('audioInput',false);
+      this.set('videoInput',true);
+    },
+
     addPhrase: function() {
       this.set('isInactive', false);
       this.set('isActive', true);

@@ -5,13 +5,25 @@
       <li class="entry">
         <ul>
           {{#if phrase.sourcePhrase}}
-            <li class="source">
+            <li class="source text">
               <p>{{phrase.sourcePhrase}}</p>
+            </li>
+            {{else if phrase.sourceVideo}}
+            <li class="source video">
+              <p>
+                <video src="{{phrase.sourceVideo}}" poster="{{phrase.sourcePoster}}" controls></video>
+              </p>
             </li>
           {{/if}}
           {{#if phrase.targetPhrase}}
-            <li class="target">
+            <li class="target text">
               <p>{{phrase.targetPhrase}}</p>
+            </li>
+            {{else if phrase.targetVideo}}
+            <li class="target video">
+              <p>
+                <video src="{{phrase.targetVideo}}" poster="{{phrase.targetPoster}}" controls></video>
+              </p>
             </li>
           {{/if}}
         </ul>
@@ -52,6 +64,32 @@
     {{/if}}
 
     {{#if isActive}}
+      <div class="inputMethod">
+        <label for="continuousInput"><input name="continuousInput" type="checkbox">Press enter to save</label>
+        <ul>
+          <li id="text">
+          {{#if textInput}}
+            <button class="selected" {{action "textInput"}}><img src="/assets/images/icons/i_method_text_white.svg" alt=""></button>
+          {{else}}
+            <button {{action "textInput"}}><img src="/assets/images/icons/i_method_text.svg" alt=""></button>
+          {{/if}}
+          </li>
+          <li id="audio">
+          {{#if audioInput}}
+            <button class="selected" {{action "audioInput"}}><img src="/assets/images/icons/i_method_audio_white.svg" alt=""></button>
+          {{else}}
+            <button {{action "audioInput"}}><img src="/assets/images/icons/i_method_audio.svg" alt=""></button>
+          {{/if}}
+          </li>
+          <li id="video">
+          {{#if videoInput}}
+            <button class="selected" {{action "videoInput"}}><img src="/assets/images/icons/i_method_video_white.svg" alt=""></button>
+          {{else}}
+            <button {{action "videoInput"}}><img src="/assets/images/icons/i_method_video.svg" alt=""></button>
+          {{/if}}
+          </li>
+        </ul>
+      </div>
       <div class="newPhrase">
         {{#if isSourceActive}}
           {{input class="input" value=model.sourcePhrase placeholder="Source Phrase" enter="saveSource" autofocus="autofocus"}}
