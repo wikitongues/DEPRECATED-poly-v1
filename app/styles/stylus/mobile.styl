@@ -243,6 +243,9 @@
                   p
                     border-radius 50px 50px 50px 0
 
+                    &::after
+                      content initial
+
                   &.target
                     p
                       border-radius 50px 50px 0 50px
@@ -280,6 +283,25 @@
               width 120px
               padding 0
               font-size 104px
+
+          .inputMethod
+            label
+              display none
+
+            ul
+              li
+                button
+                  width 80px
+                  height 80px
+                  margin 20px 10px
+
+                  img
+                    width 50px
+
+                &#video
+                  button
+                    img
+                      width 40px
 
           .newPhrase
             input

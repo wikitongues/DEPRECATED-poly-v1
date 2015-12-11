@@ -6,7 +6,8 @@ module.exports = function(environment) {
     environment: environment,
     contentSecurityPolicy: {
       'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com",
-      'img-src': "'self' https://s3.amazonaws.com http://fredericoandrade.com",
+      'img-src': "'self' https://s3.amazonaws.com/ http://fredericoandrade.com",
+      'media-src': "'self' https://s3.amazonaws.com/",
       'font-src': "'self' https://fonts.gstatic.com",
       'style-src': "'self' 'unsafe-inline' https://fonts.googleapis.com"
     },

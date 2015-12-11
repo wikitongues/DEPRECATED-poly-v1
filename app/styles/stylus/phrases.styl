@@ -1,10 +1,10 @@
 .content-wrapper
     min-height 46vh
+    display block
     position relative
     overflow hidden
     margin auto
     font-size 1.2em
-    display table
     padding 0
     background #fff
     width 600px
@@ -75,6 +75,13 @@
               z-index 1
               font-size 1.2em
               max-width 90%
+              overflow hidden
+
+
+              video
+                width 102%
+                float left
+                margin -3px 0 0 -3px
 
               .progress
                 display inline-block
@@ -106,6 +113,21 @@
                   &:nth-of-type(3)
                     margin 0
                     -webkit-animation loading 1s .2s infinite cubic-bezier(.60,0,.40,1)
+
+            &.video
+              p
+                border none !important
+                padding 0
+
+                &::after
+                  content url("../assets/images/icons/i_playVideo.svg")
+                  position absolute
+                  z-index 2
+                  color white
+                  left 50%
+                  transform translateX(-50%) translateY(-50%)
+                  top 50%
+                  width 40px
 
             &.source
               p
