@@ -7,8 +7,6 @@ For developers: help build language corpora at scale, in every language, written
 
 ## Getting started? Start [here](#prerequisites)
 
-===
-
 ##To Do
 
 ###Fundamental
