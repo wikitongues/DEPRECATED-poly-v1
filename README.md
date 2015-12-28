@@ -2,15 +2,23 @@
 
 This README outlines the details of collaborating on this Ember CLI application.
 
-Poly makes crowdsourcing dictionaries in any language easy and familiar.
-For developers: help build language corpora at scale, in every language, written or not.
+Poly makes crowdsourcing translation dictionaries in any language easy and familiar.
 
-## Getting started? Start [here](#prerequisites)
+Getting started? Start [here](#prerequisites)
+
+##Features
+* compose translation dictionaries between two languages using text
+* immediately publish content to the Poly community
+
 
 ##To Do
 
 ###Fundamental
-* save phrases to book
+* audiovisual support
+* book editing in interface
+* search and browsing
+* offline-first architecture
+* api
 
 ###Features
 * edit books
@@ -86,7 +94,7 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deployment
 
-Make pull requests to have your contributions reviewed and deployed by the administrator, or reach out to [him](https://github.com/FredericoAndrade) directly.
+Make pull requests to have your contributions reviewed and deployed by the administrator, or reach out to [him](https://github.com/FredericoAndrade) directly. Refer to best practices for contributing to open source projects on the [Contribution Guide](http://www.contribution-guide.org/)
 
 ## Further Reading / Useful Links
 
