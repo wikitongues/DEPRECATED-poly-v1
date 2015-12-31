@@ -30,7 +30,7 @@ Planned features for future releases. Releases are mapped below. We use [semanti
   - [ ] User photo
 - [ ] Book authorship
 - [ ] Sign in upon account creation
-- [ ] Handle error messages on login page (BUG)
+- [ ] Handle error messages on login page
 - [ ] Properly remove all phrases on book destroy (BUG)
 - [ ] Fix double input (BUG)
 
