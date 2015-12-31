@@ -26,7 +26,6 @@ Planned features for future releases. Releases are mapped below. We follow seman
 - [ ] Handle error messages on login page (BUG)
 - [ ] Properly remove all phrases on book destroy (BUG)
 - [ ] Fix double input (BUG)
-
 - [ ] Profile page
   - [ ] User object
   - [ ] User name
