@@ -13,22 +13,15 @@ Getting started? Start [here](#prerequisites)
 * Immediately publish content to the Poly community
 
 #Feature Map
-Planned features for future releases. Releases are mapped below. We follow [semantic versioning](http://semver.org/).
+Planned features for future releases. Releases are mapped below. We use [semantic versioning](http://semver.org/).
 
 ###Version 0.1
 
+- [x] ~~Create new phrasebook~~
+- [x] ~~Input and save new phrase~~
 - [x] ~~Audio and video phrase interface~~
-- [x] ~~Favoriting~~
+- [x] ~~Tag a book as Favorite~~
 - [x] ~~Refactor new phrase controller~~
-- [ ] Handle error messages on login page (BUG)
-- [ ] Properly remove all phrases on book destroy (BUG)
-- [ ] Fix double input (BUG)
-- [ ] Profile page
-  - [ ] User object
-  - [ ] User name
-  - [ ] User photo
-- [ ] Book authorship
-- [ ] Sign in upon account creation
 
 ###Version 0.1~
 - [ ] Continuous input
@@ -36,15 +29,26 @@ Planned features for future releases. Releases are mapped below. We follow [sema
 - [ ] Document scroll position progress marker
 - [ ] Fixed book languages sub-header
 
-###Version  0.2
+###Version 0.2
+- [ ] Profile page
+  - [ ] User object
+  - [ ] User name
+  - [ ] User photo
+- [ ] Book authorship
+- [ ] Sign in upon account creation
+- [ ] Handle error messages on login page (BUG)
+- [ ] Properly remove all phrases on book destroy (BUG)
+- [ ] Fix double input (BUG)
 
-- [ ] Only save new book if all inputs are complete
+###Version  0.3
+
 - [ ] Book title, description, L1, L2 editing
 - [ ] Phrase editing
 - [ ] Input and upload sound and video phrases
 - [ ] Input and upload book banner images
+- [ ] Only save new book if all inputs are complete
 
-###Version 0.3
+###Version 0.4
 
 - [ ] Add tags to books
 - [ ] Search
