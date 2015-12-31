@@ -13,16 +13,13 @@ Getting started? Start [here](#prerequisites)
 * Immediately publish content to the Poly community
 
 #Feature Map
-Planned features for future releases. Releases are mapped below. We follow semantic versioning.
+Planned features for future releases. Releases are mapped below. We follow [semantic versioning](http://semver.org/).
 
-###Version 0.0
+###Version 0.1
 
 - [x] ~~Audio and video phrase interface~~
 - [x] ~~Favoriting~~
 - [x] ~~Refactor new phrase controller~~
-
-###Version 0.1
-
 - [ ] Handle error messages on login page (BUG)
 - [ ] Properly remove all phrases on book destroy (BUG)
 - [ ] Fix double input (BUG)
