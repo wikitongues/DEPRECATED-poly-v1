@@ -10,7 +10,7 @@ Getting started? Start [here](#prerequisites)
 * Compose translation dictionaries between two languages using text
 * Immediately publish content to the Poly community
 
-##Feature Map
+#Feature Map
 Planned features for future releases. Releases are mapped below
 
 ###Version 0.0.1
