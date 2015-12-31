@@ -22,10 +22,6 @@ Planned features for future releases. Releases are mapped below. We use [semanti
 - [x] ~~Audio and video phrase interface~~
 - [x] ~~Tag a book as Favorite~~
 - [x] ~~Refactor new phrase controller~~
-- [ ] Continuous phrase input (hit enter to save)
-- [ ] Input area blur action behavior
-- [ ] Document scroll position progress marker
-- [ ] Fixed book languages sub-header
 
 ###Version 0.2
 - [ ] Profile page
@@ -42,9 +38,13 @@ Planned features for future releases. Releases are mapped below. We use [semanti
 
 - [ ] Book title, description, L1, L2 editing
 - [ ] Phrase editing
+- [ ] Continuous text phrase input (hit enter to save)
 - [ ] Input and upload sound and video phrases
 - [ ] Input and upload book banner images
 - [ ] Only save new book if all inputs are complete
+- [ ] Input area blur action behavior
+- [ ] Document scroll position progress marker
+- [ ] Fixed book languages sub-header
 
 ###Version 0.4
 
