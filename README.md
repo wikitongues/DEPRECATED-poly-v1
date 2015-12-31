@@ -1,12 +1,12 @@
 # Wikitongues Poly
 
-This README outlines the details of collaborating on this Ember CLI application.
-
 ####Poly makes crowdsourcing translation dictionaries in any language easy and familiar.
+
+This README outlines the details of collaborating on this Ember CLI application.
 
 Getting started? Start [here](#prerequisites)
 
-##Current Features
+###Current Features
 * Compose translation dictionaries between two languages using text
 * Immediately publish content to the Poly community
 
