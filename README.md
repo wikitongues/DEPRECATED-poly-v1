@@ -16,6 +16,8 @@ Planned features for future releases. Releases are mapped below
 ###Version 0.0.1
 
 - [x] ~~Audio and video phrase interface~~
+- [x] ~~Favoriting~~
+- [x] ~~Refactor new phrase controller~~
 
 
 ###Version 0.1
@@ -32,11 +34,13 @@ Planned features for future releases. Releases are mapped below
 - [ ] Properly remove all phrases on book destroy
 - [ ] Sign in upon account creation
 - [ ] Fix double input
+- [ ] Only save new book if all inputs are complete
 
 ###Version 0.2
 
 - [ ] Search
 - [ ] Sound and video input
+- [ ] Upload new book images
 - [ ] Refine input flow
 - [ ] Continuous input
 - [ ] Input area blur behavior
@@ -46,28 +50,10 @@ Planned features for future releases. Releases are mapped below
 ###Version 0.3
 - [ ] Offline-first architecture
 - [ ] Public API
+- [ ] Add tags to books
 
-
-###Features
-<!-- * edit books -->
-* build language database
-* build settings/profile page
-<!-- * build search function -->
-<!-- * add created dateTime to book, phrase -->
-* add tags to books
-* refactor new controller interaction
-* favoriting
-* only save new book if all inputs are complete
-* new book images
-
-
-###Cosmetic
-* fix add button on mobile
-* fix phrase input progress marker
-
-###Improvements
-* refactor new phrase controller
-
+###Version 1.0
+- [ ] Language object model
 
 
 ## About [Wikitongues](www.wikitongues.org)
