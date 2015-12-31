@@ -2,16 +2,41 @@
 
 This README outlines the details of collaborating on this Ember CLI application.
 
-Poly makes crowdsourcing translation dictionaries in any language easy and familiar.
+####Poly makes crowdsourcing translation dictionaries in any language easy and familiar.
 
 Getting started? Start [here](#prerequisites)
 
-##Features
-* compose translation dictionaries between two languages using text
-* immediately publish content to the Poly community
+##Current Features
+* Compose translation dictionaries between two languages using text
+* Immediately publish content to the Poly community
 
+##Feature Map
+Planned features for future releases. Releases are mapped below
 
-##To Do
+###Version 0.1
+
+- [ ] User object
+- [ ] User name
+- [ ] User photo
+- [ ] Book authorship
+- [ ] Book banner setting
+- [ ] Book metadata editing
+- [ ] Phrase editing
+- [ ] Handle error messages on login page
+- [ ] Properly remove all phrases on book destroy
+- [ ] Sign in upon account creation
+- [ ] Fix double input
+- [ ] Refine input flow
+- [ ] Continuous input
+- [ ] Input area blur behavior
+- [ ] Document scroll position progress marker
+- [ ] Fixed book key header
+
+###Version 0.2
+
+- [ ] Search
+- [ ] Sound and video input
+
 
 ###Fundamental
 * audiovisual support
@@ -92,9 +117,12 @@ Make use of the many generators for code, try `ember help generate` for more det
 * `ember build` (development)
 * `ember build --environment production` (production)
 
-### Deployment
+### Contributing
 
-Make pull requests to have your contributions reviewed and deployed by the administrator, or reach out to [him](https://github.com/FredericoAndrade) directly. Refer to best practices for contributing to open source projects on the [Contribution Guide](http://www.contribution-guide.org/)
+Make pull requests to have your contributions reviewed and deployed by the administrator, or contact [us](https://github.com/FredericoAndrade) directly.
+
+Refer to best practices for contributing to open source projects on the [Github Contribution guide](https://guides.github.com/activities/contributing-to-open-source/) or the more comprehensive [Open-Source Contribution Guide](http://www.contribution-guide.org/).
+
 
 ## Further Reading / Useful Links
 
