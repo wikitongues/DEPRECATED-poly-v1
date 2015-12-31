@@ -13,18 +13,19 @@ Getting started? Start [here](#prerequisites)
 * Immediately publish content to the Poly community
 
 #Feature Map
-Planned features for future releases. Releases are mapped below
+Planned features for future releases. Releases are mapped below. We follow semantic versioning.
 
 ###Version 0.0
 
 - [x] ~~Audio and video phrase interface~~
 - [x] ~~Favoriting~~
 - [x] ~~Refactor new phrase controller~~
+
+###Version 0.1
+
 - [ ] Handle error messages on login page (BUG)
 - [ ] Properly remove all phrases on book destroy (BUG)
 - [ ] Fix double input (BUG)
-
-###Version 0.1
 
 - [ ] Profile page
   - [ ] User object
@@ -74,7 +75,6 @@ Currently, there are around 7000 classified languages, with an unknowable number
   + [Gitter](https://gitter.im/wikitongues)
   + [IRC](http://www.irchelp.org/)
 
-===
 
 ## Prerequisites
 
