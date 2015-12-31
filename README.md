@@ -1,6 +1,6 @@
 # Wikitongues Poly
 
-####Poly makes crowdsourcing translation dictionaries in any language easy and familiar.
+###Poly makes crowdsourcing translation dictionaries in any language easy and familiar.
 
 This README outlines the details of collaborating on this Ember CLI application.
 
@@ -8,17 +8,21 @@ Getting started? Start [here](#prerequisites)
 
 ###Current Features
 * Compose translation dictionaries between two languages using text
+* Browse available dictionaries
+* Favorite dictionaries
 * Immediately publish content to the Poly community
 
 #Feature Map
 Planned features for future releases. Releases are mapped below
 
-###Version 0.0.1
+###Version 0.0
 
 - [x] ~~Audio and video phrase interface~~
 - [x] ~~Favoriting~~
 - [x] ~~Refactor new phrase controller~~
-
+- [ ] Handle error messages on login page (BUG)
+- [ ] Properly remove all phrases on book destroy (BUG)
+- [ ] Fix double input (BUG)
 
 ###Version 0.1
 
@@ -27,32 +31,34 @@ Planned features for future releases. Releases are mapped below
   - [ ] User name
   - [ ] User photo
 - [ ] Book authorship
-- [ ] Book banner setting
-- [ ] Book metadata editing
-- [ ] Phrase editing
-- [ ] Handle error messages on login page
-- [ ] Properly remove all phrases on book destroy
 - [ ] Sign in upon account creation
-- [ ] Fix double input
-- [ ] Only save new book if all inputs are complete
 
-###Version 0.2
-
-- [ ] Search
-- [ ] Sound and video input
-- [ ] Upload new book images
-- [ ] Refine input flow
+###Version 0.1~
 - [ ] Continuous input
 - [ ] Input area blur behavior
 - [ ] Document scroll position progress marker
-- [ ] Fixed book key header
+- [ ] Fixed book languages sub-header
+
+###Version  0.2
+
+- [ ] Only save new book if all inputs are complete
+- [ ] Book title, description, L1, L2 editing
+- [ ] Phrase editing
+- [ ] Input and upload sound and video phrases
+- [ ] Input and upload book banner images
 
 ###Version 0.3
-- [ ] Offline-first architecture
-- [ ] Public API
+
 - [ ] Add tags to books
+- [ ] Search
 
 ###Version 1.0
+
+- [ ] Offline-first architecture
+
+###Version 2.0
+
+- [ ] Public API
 - [ ] Language object model
 
 
