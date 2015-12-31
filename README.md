@@ -13,6 +13,10 @@ Getting started? Start [here](#prerequisites)
 ##Feature Map
 Planned features for future releases. Releases are mapped below
 
+###Version 0.0.1
+
+- [*] Audio and video phrase interface
+
 ###Version 0.1
 
 - [ ] User object
@@ -26,31 +30,31 @@ Planned features for future releases. Releases are mapped below
 - [ ] Properly remove all phrases on book destroy
 - [ ] Sign in upon account creation
 - [ ] Fix double input
+
+###Version 0.2
+
+- [ ] Search
+- [ ] Sound and video input
 - [ ] Refine input flow
 - [ ] Continuous input
 - [ ] Input area blur behavior
 - [ ] Document scroll position progress marker
 - [ ] Fixed book key header
 
-###Version 0.2
-
-- [ ] Search
-- [ ] Sound and video input
-
 
 ###Fundamental
-* audiovisual support
+
 * book editing in interface
 * search and browsing
 * offline-first architecture
 * api
 
 ###Features
-* edit books
+<!-- * edit books -->
 * build language database
 * build settings/profile page
-* build search function
-* add created dateTime to book, phrase
+<!-- * build search function -->
+<!-- * add created dateTime to book, phrase -->
 * add tags to books
 * refactor new controller interaction
 * favoriting
