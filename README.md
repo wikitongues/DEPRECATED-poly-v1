@@ -22,8 +22,6 @@ Planned features for future releases. Releases are mapped below. We use [semanti
 - [x] ~~Audio and video phrase interface~~
 - [x] ~~Tag a book as Favorite~~
 - [x] ~~Refactor new phrase controller~~
-
-###Version 0.1~
 - [ ] Continuous input
 - [ ] Input area blur behavior
 - [ ] Document scroll position progress marker
