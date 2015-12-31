@@ -15,8 +15,7 @@ Planned features for future releases. Releases are mapped below
 
 ###Version 0.0.1
 
-- [√] Audio and video phrase interface
-- [ ]
+- [x] Audio and video phrase interface
 
 
 ###Version 0.1
