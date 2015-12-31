@@ -17,11 +17,13 @@ Planned features for future releases. Releases are mapped below
 
 - [√] Audio and video phrase interface
 
+
 ###Version 0.1
 
-- [ ] User object
-- [ ] User name
-- [ ] User photo
+- [ ] Profile page
+  - [ ] User object
+  - [ ] User name
+  - [ ] User photo
 - [ ] Book authorship
 - [ ] Book banner setting
 - [ ] Book metadata editing
@@ -41,13 +43,10 @@ Planned features for future releases. Releases are mapped below
 - [ ] Document scroll position progress marker
 - [ ] Fixed book key header
 
+###Version 0.3
+- [ ] Offline-first architecture
+- [ ] Public API
 
-###Fundamental
-
-* book editing in interface
-* search and browsing
-* offline-first architecture
-* api
 
 ###Features
 <!-- * edit books -->
