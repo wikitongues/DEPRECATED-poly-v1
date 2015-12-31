@@ -54,9 +54,6 @@ Planned features for future releases. Releases are mapped below. We use [semanti
 ###Version 1.0
 
 - [ ] Offline-first architecture
-
-###Version 2.0
-
 - [ ] Public API
 - [ ] Language object model
 
