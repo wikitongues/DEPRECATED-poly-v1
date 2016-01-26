@@ -66,7 +66,7 @@ Currently, there are around 7000 classified languages, with an unknowable number
 
 
 ### Community
-  + [Slack](http://www.wikitongues.slack.com)
+  + [Slack](https://wikitongues.slack.com)
   + [Gitter](https://gitter.im/wikitongues)
   + [IRC](http://www.irchelp.org/)
 
