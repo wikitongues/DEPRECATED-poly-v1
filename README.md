@@ -1,7 +1,7 @@
 # Wikitongues Poly Prototype (DEPRECATED)
 
-#NOTE:
-This implementation is deprecated. The project has moved to https://github.com/wikitongues/poly
+##This implementation is deprecated. The project has moved to https://github.com/wikitongues/poly
+
 
 ###Poly makes crowdsourcing translation dictionaries in any language easy and familiar.
 
