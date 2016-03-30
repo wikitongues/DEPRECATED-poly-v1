@@ -1,4 +1,7 @@
-# Wikitongues Poly
+# Wikitongues Poly Prototype
+
+#NOTE:
+This implementation is deprecated. The project has moved to https://github.com/wikitongues/poly-react
 
 ###Poly makes crowdsourcing translation dictionaries in any language easy and familiar.
 
