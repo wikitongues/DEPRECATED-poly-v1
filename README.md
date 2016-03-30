@@ -1,4 +1,4 @@
-# Wikitongues Poly Prototype
+# Wikitongues Poly Prototype (DEPRECATED)
 
 #NOTE:
 This implementation is deprecated. The project has moved to https://github.com/wikitongues/poly-react
